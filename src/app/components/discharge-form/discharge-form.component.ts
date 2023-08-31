@@ -376,6 +376,14 @@ export class DischargeFormComponent {
      {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Socio- economic History', label: 'Socio- economic History:'},
      {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Investigations on Discharge', label: 'Investigations on Discharge:'},
      {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Medications', label: 'Medications:'},
+    
+     {type: 'sectionTitle', title: 'RN DETAILS', color: '#000000'},
+     {type: 'text', name: 'Name', placeHolder: 'RN Name', label:'RN Name '},
+    {type: 'textarea', name: 'Signature', placeHolder: 'Signature :', label:'Signature :'},
+    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
+      start: {name: 'dob', placeHolder: 'D.O.A'},
+      end: {name: 'dob', placeHolder: 'D.O.D'}
+    }},
     ]
 
   profileForm = this.formBuilder.group({
@@ -444,6 +452,8 @@ export class DischargeFormComponent {
     DiagnosisOrMedication:['', Validators.required],
     MedsAndDosage:['', Validators.required],
     ClinicalNotes:['', Validators.required],
+    Name:['', Validators.required],
+    Signature:['', Validators.required],
   });
 
   saveForm() {
