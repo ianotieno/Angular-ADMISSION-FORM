@@ -223,50 +223,47 @@ export class AdmissionAssesmentFormComponent {
       start: {name: 'dob', placeHolder: 'D.O.A'},
       end: {name: 'dob', placeHolder: 'D.O.D'}
     }},
-    {type: 'checkbox', name: 'infectiousdisease', label: "Do you have or have you been exposed to an infectious disease in the past 14 days? (e.g. Chickenpox, Measles:", options: [
+    {type: 'radios', name: 'infectiousdisease', label: "Do you have or have you been exposed to an infectious disease in the past 14 days? (e.g. Chickenpox, Measles:", options: [
       {label: 'Yes',value: 'infectiousdisease',   checked: false},
-      {label: 'No',value: 'infectiousdisease',   checked: false},
+      {label: 'No',value: 'infectiousdisease',   checked: true},
        ]},
-   {type: 'checkbox', name: 'surgicalproblems', label: "Do you have any other medical or surgical problems?(e.g. Epilepsy, Liver, Kidney, Psychiatric):", options: [
+   {type: 'radios', name: 'surgicalproblems', label: "Do you have any other medical or surgical problems?(e.g. Epilepsy, Liver, Kidney, Psychiatric):", options: [
        {label: 'Yes',value: 'surgicalproblems',   checked: false},
-       {label: 'No',value: 'surgicalproblems',   checked: false},
+       {label: 'No',value: 'surgicalproblems',   checked: true},
         ]},
 
     {type: 'text', name: 'Mobility', placeHolder: 'If yes, please specify which one:', label: 'If yes, please specify which one:	'}, 
-    {type: 'checkbox', name: 'surgicalproblems', label: "Have you ever been diagnosed with cancer:", options: [
+    {type: 'radios', name: 'surgicalproblems', label: "Have you ever been diagnosed with cancer:", options: [
       {label: 'Yes',value: 'cancer',   checked: false},
-      {label: 'No',value: 'cancer',   checked: false},
+      {label: 'No',value: 'cancer',   checked: true},
        ]},
 
    {type: 'text', name: 'Mobility', placeHolder: 'If yes, please specify the type of cancer:', label: 'If yes, please specify the type of cancer:	'},
-   {type: 'dateRange', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-    start: {name: 'dob', placeHolder: 'D.O.A'},
-    end: {name: 'dob', placeHolder: 'D.O.D'}
-  }}, 
+   {type: 'date', name: 'dob', label: 'Enter a Date:', hint: 'MM/DD/YYYY' },
 
   
-   {type: 'checkbox', name: 'skinulcers', label: "Do you currently have any skin wounds, pressure sores or skin ulcers:", options: [
+   {type: 'radios', name: 'skinulcers', label: "Do you currently have any skin wounds, pressure sores or skin ulcers:", options: [
     {label: 'Yes',value: 'skinulcers',   checked: false},
-    {label: 'No',value: 'skinulcers',   checked: false},
+    {label: 'No',value: 'skinulcers',   checked: true},
      ]},
   {type: 'text', name: 'skinulcers', placeHolder: 'If yes, please specify which one:', label: 'If yes, please specify which one:	'}, 
 
-  {type: 'checkbox', name: 'interpreter', label: "Do you require an interpreter:", options: [
+  {type: 'radios', name: 'interpreter', label: "Do you require an interpreter:", options: [
    {label: 'Yes',value: 'interpreter',   checked: false},
-   {label: 'No',value: 'interpreter',   checked: false},
+   {label: 'No',value: 'interpreter',   checked: true},
    ]},
    {type: 'text', name: 'interpreter', placeHolder: 'If yes Please specify Language', label: 'Please specify Language'},
 
-  {type: 'checkbox', name: 'interpreter', label: "Do you have someone to interpret for you:", options: [
+  {type: 'radios', name: 'interpreter', label: "Do you have someone to interpret for you:", options: [
     {label: 'Yes',value: 'interpreter',   checked: false},
-    {label: 'No',value: 'interpreter',   checked: false},
+    {label: 'No',value: 'interpreter',   checked: true},
      ]},
      {type: 'text', name: 'interpreter', placeHolder: 'If yes Please Enter Name of person:', label: 'If yes Please Enter Name of person'},
      {type: 'text', name: 'interpreter', placeHolder: 'If yes Please Enter Phone number', label: 'If yes Please Enter Phone number'},
     
-     {type: 'checkbox', name: 'bloodthinning', label: "Do you take any blood thinning/arthritis medication?(e.g. Warfarin, Plavix, Asprin) :", options: [
+     {type: 'radios', name: 'bloodthinning', label: "Do you take any blood thinning/arthritis medication?(e.g. Warfarin, Plavix, Asprin) :", options: [
       {label: 'Yes',value: 'bloodthinning',   checked: false},
-      {label: 'No',value: 'bloodthinning',   checked: false},
+      {label: 'No',value: 'bloodthinning',   checked: true},
        ]},
      {type: 'text', name: 'bloodthinning', placeHolder: 'If yes Please specify', label: 'If yes Please specify'},
     
@@ -286,9 +283,9 @@ export class AdmissionAssesmentFormComponent {
         {label: 'Non expressive',value: 'Verbalresponse',   checked: false},
         {label: 'Receptive',value: 'Verbalresponse',   checked: false},
          ]},
-         {type: 'checkbox', name: 'Memorydeficit', label: "Memory deficit:", options: [
+         {type: 'radios', name: 'Memorydeficit', label: "Memory deficit:", options: [
           {label: 'Yes',value: 'Memorydeficit',   checked: false},
-          {label: 'No',value: 'Memorydeficit',   checked: false},
+          {label: 'No',value: 'Memorydeficit',   checked: true},
            ]},
         
         {type: 'radios', name: 'decisionmaking', label: "Impaired decision making:", options: [
