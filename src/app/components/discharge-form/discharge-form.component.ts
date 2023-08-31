@@ -96,20 +96,45 @@ export class DischargeFormComponent {
       {label: 'No',value: 'tendencytobleed',   checked: false},
         ]},
 
-    {type: 'checkbox', name: 'irregularheartbeat', label: "Do you have an irregular heart beat?", options: [
-      {label: 'Yes',value: 'irregularheartbeat',   checked: false},
-      {label: 'No',value: 'irregularheartbeat',   checked: false},
+    {type: 'checkbox', name: 'bloodpressure', label: "Have you ever had high blood pressure?", options: [
+      {label: 'Yes',value: 'bloodpressure',   checked: false},
+      {label: 'No',value: 'blood pressure',   checked: false},
             ]},
         
+    {type: 'sectionTitle', title: 'RESPIRATORY:', color: '#000000'},
+    {type: 'checkbox', name: ' smoke', label: "Do you smoke?", options: [
+      {label: 'Yes',value: ' smoke',   checked: false},
+      {label: 'No',value: ' smoke',   checked: false},
+            ]},
+    {type: 'text', name: ' smoking', placeHolder: 'Any history of smoking:', label: 'Any history of smoking	'}, 
 
-    
-    
-    {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
-    {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
-    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+    {type: 'checkbox', name: 'Asthma', label: "Do you have Asthma?", options: [
+      {label: 'Yes',value: 'Asthma',   checked: false},
+      {label: 'No',value: 'Asthma',   checked: false},
+       ]},
+    {type: 'checkbox', name: 'Bronchitis', label: "Do you have Bronchitis?", options: [
+       {label: 'Yes',value: 'Bronchitis',   checked: false},
+       {label: 'No',value: 'Bronchitis',   checked: false},
+        ]},                  
+    {type: 'checkbox', name: 'Sleepapnea', label: "Do you have Sleep apnea?", options: [
+        {label: 'Yes',value: 'Sleepapnea',   checked: false},
+        {label: 'No',value: 'Sleepapnea',   checked: false},
+                ]},
+      {type: 'checkbox', name: 'nebulizer', label: "Do you use a nebulizer, puffer or EPAP/CPAP machine or home Oxygen? (please bring puffers with you)?", options: [
+         {label: 'Yes',value: 'nebulizer',   checked: false},
+         {label: 'No',value: 'nebulizer',   checked: false},
+            ]},         
+     {type: 'checkbox', name: 'Respirations', label: "Respirations", options: [
+         {label: 'Regular ',value: 'Respirations',   checked: false},
+         {label: 'Unlabored',value: 'Respirations',   checked: false},
+         {label: 'Labored',value: 'Respirations',   checked: false},
+           ]}, 
+     {type: 'checkbox', name: 'Shortnessofbreath', label: "Shortness of breath ?", options: [
+       {label: 'Yes',value: 'Shortnessofbreath',   checked: false},
+       {label: 'No',value: 'Shortnessofbreath',   checked: false},
+               ]},      
+           
+
 
   ]
 
@@ -135,13 +160,13 @@ export class DischargeFormComponent {
     Lastchecked: ['', Validators.required],
     heartproblems: ['', Validators.required],
     irregularheartbeat: ['', Validators.required],
-    mobility: ['', Validators.required],
-    motor: ['', Validators.required],
-    occupation: ['', Validators.required],
-    MaritalStatus: ['', Validators.required],
-    Nationality: ['', Validators.required],
-    Languages: ['', Validators.required],
-    Religion: ['', Validators.required],
+    smoke: ['', Validators.required],
+    Asthma: ['', Validators.required],
+    Bronchitis: ['', Validators.required],
+    Sleepapnea: ['', Validators.required],
+    nebulizer: ['', Validators.required],
+    Respirations: ['', Validators.required],
+    Shortnessofbreath: ['', Validators.required],
     Name: ['', Validators.required],
     doctor: ['', Validators.required],
     Relationship: ['', Validators.required],
