@@ -316,6 +316,18 @@ export class DischargeFormComponent {
       {label: 'Hypotensive',value: 'whereapplicable',   checked: false},
       {label: 'Hypertensive',value: 'whereapplicable',   checked: false},
        ]},
+    {type: 'checkbox', name: 'Pulse', label: "Pulse:", options: [
+        {label: 'Regular',value: 'Pulse',   checked: false},
+        {label: 'Irregular',value: 'Pulse',   checked: false},
+         ]},
+     {type: 'checkbox', name: 'Skin', label: "Skin:", options: [
+        {label: 'Pale',value: 'Skin',   checked: false},
+        {label: 'Cyanotic',value: 'Skin',   checked: false},
+        {label: 'Mottled',value: 'Skin',   checked: false},
+        {label: 'Warm',value: 'Skin',   checked: false},
+        {label: 'Cold',value: 'Skin',   checked: false},
+        {label: 'Dry',value: 'Skin',   checked: false},
+         ]},    
 
     ]
 
@@ -372,6 +384,8 @@ export class DischargeFormComponent {
     Sleepaids :['', Validators.required],
     Seizures :['', Validators.required],
     whereapplicable:['', Validators.required],
+    Pulse:['', Validators.required],
+    Skin:['', Validators.required],
   });
 
   saveForm() {
