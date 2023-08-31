@@ -1,7 +1,7 @@
 <ng-container [formGroup]="checkboxGroup">
   <mat-label class="margin-left">
     {{label}}
-    <mat-label [ngClass]="{'full-width' : alignment === 'vertical' }"
+    <mat-label [ngClass]="{'checkbox-full-width' : alignment === 'vertical' }"
       *ngFor="let control of checkboxGroup.controls['options'].controls; let index=index;"
     >
       {{ options[index].label }}
