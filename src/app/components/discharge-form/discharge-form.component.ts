@@ -48,28 +48,19 @@ export class DischargeFormComponent {
     {type: 'sectionTitle', title: 'PHYSICAL DETAILS:', color: '#000000'},
 
     {type: 'text', name: 'Weight', placeHolder: 'What is your weight:kilograms', label: 'What is your weight:kilograms'},
-    {type: 'text', name: 'Weight', placeHolder: 'What is your weight:kilograms', label: 'What is your weight:kilograms'},
+    {type: 'text', name: 'height', placeHolder: 'What is your height:centimeters', label: 'What is your height:centimeters'},
     
+    {type: 'sectionTitle', title: 'PREVIOUS OPERATIONS:', color: '#000000'},
+    {type: 'checkbox', name: 'previousoperations', label: "Have you had any previous operations ", options: [
+      {label: 'Yes',value: 'Food',   checked: false},
+      {label: 'No',value: 'Food',   checked: false},
+        ]},
+    {type: 'text', name: 'details', placeHolder: 'details', label: 'details'},
     {type: 'text', name: 'Nameofreferringdoctor', placeHolder: 'Name of referring doctor', label: 'Name of referring doctor'},
     {type: 'text', name: 'Doctorscontact', placeHolder: 'Doctor’s contact', label: 'Doctor’s contact'},
     {type: 'sectionTitle', title: 'Admission Date:', color: '#000000'},
     
-    
-    {type: 'sectionTitle', title: 'PERSONAL DETAILS:', color: '#000000'},
-    {type: 'text', name: 'Title', placeHolder: 'Title', label: 'Title'},
-    {type: 'text', name: 'Surname', placeHolder: 'Surname', label: 'Surname'},
-    {type: 'text', name: 'Firstname', placeHolder: 'First name', label: 'First name'},
-    {type: 'text', name: 'Othernames', placeHolder: 'Other names', label: 'Other names'},
-
    
-   
-    {type: 'groupedInputs', name: 'Residential Address:', label:'Residential Address:', inputs: [
-    {type: 'text', name: 'County', placeHolder: 'County', label: 'County'},
-    {type: 'text', name: 'Town', placeHolder: 'Town', label: 'Town'},
-    {type: 'text', name: 'Arealocality', placeHolder: 'Area/ locality', label: 'Area/ locality'},
-    {type: 'text', name: 'PostalAddress', placeHolder: 'Postal Address (if different):', label: 'Postal Address (if different):'},
-    {type: 'text', name: 'Code', placeHolder: 'Code', label: 'Code'},
-  ]},
 
     {type: 'text', name: 'Emailaddress', placeHolder: 'Email address', label: 'Email address'},
     {type: 'text', name: 'Telephone', placeHolder: 'Telephone:  Home', label: 'Telephone:  Home'},
@@ -81,34 +72,8 @@ export class DischargeFormComponent {
     {type: 'text', name: 'Languages', placeHolder: 'Languages client speaks/ understands', label: 'Languages client speaks/ understands'},
     {type: 'text', name: 'Religion', placeHolder: 'Religion', label: 'Religion'},
     
-    {type: 'groupedInputs', name: 'EMERGENCY CONTACT PERSON', label:'EMERGENCY CONTACT PERSON:', inputs: [
-      {type: 'text', name: 'Name', placeHolder: 'Name', label: 'Name'},
-      {type: 'textarea', name: 'Relationship', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
-      {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
-      {type: 'text', name: 'Cellphone', placeHolder: 'Cell phone', label: 'Cell phone'},
-      {type: 'text', name: 'Workphone', placeHolder: 'Work phone', label: 'Work phone'},
-    ]},
-    {type: 'groupedInputs', name: 'SECOND CONTACT PERSON', label:'EMERGENCY CONTACT PERSON:', inputs: [
-      {type: 'text', name: 'Name', placeHolder: 'Name', label: 'Name'},
-      {type: 'textarea', name: 'Relationshiptopatient', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
-      {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
-      {type: 'text', name: 'Cellphone', placeHolder: 'Cell phone', label: 'Cell phone'},
-      {type: 'text', name: 'Workphone', placeHolder: 'Work phone', label: 'Work phone'},
-    ]},
-    {type: 'groupedInputs', name: 'THIRD CONTACT PERSON', label:'EMERGENCY CONTACT PERSON:', inputs: [
-      {type: 'text', name: 'Name', placeHolder: 'Name', label: 'Name'},
-      {type: 'textarea', name: 'Relationshiptopatient', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
-      {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
-      {type: 'text', name: 'Cellphone', placeHolder: 'Cell phone', label: 'Cell phone'},
-      {type: 'text', name: 'Workphone', placeHolder: 'Work phone', label: 'Work phone'},
-    ]},
-    {type: 'sectionTitle', title: 'HOW WILL YOU CLAIM  PAY FOR THIS ADMISSION?:', color: '#000000'},
-    {type: 'checkbox', name: 'claimpay', label: "Pick your checkbox options", options: [
-      {value: 'PrivateHealth', label: 'Private Health Insurance (Kindly indicate which one below, ask the nurse/ admitting officer if the hospital provides for the same) ',  checked: true},
-      {value: 'Nhif',  label: 'Nhif',  checked: false},
-      {value: 'Cash',  label: 'Cash',  checked: false},
-      {value: 'other', label: 'Other (kindly explain below)',  checked: false},
-    ]},
+    
+    
     {type: 'textarea', name: 'Other', placeHolder: 'kindly explain', label:'kindly explain'},
     {type: 'sectionTitle', title: 'Videography and photography aided treatment:', color: '#000000'},
     {type: 'sectionTitle', title: 'Creswave hospital, with your consent wishes to use videos and photos to track the progress of our clients.These videos will solely be used for this purpose and will only be shared among family and clinical staff involved in the direct care of the client. They will also be shared at the discretion of the client/ guardian.This will only happen if the family / relatives agree and sign the consent below.'
@@ -154,8 +119,8 @@ export class DischargeFormComponent {
     Latex: ['', Validators.required],
     Weight: ['', Validators.required],
     dob: ['', Validators.required],
-    Firstname: ['', Validators.required],
-    Othernames: ['', Validators.required],
+    height: ['', Validators.required],
+    previousoperations: ['', Validators.required],
     County: ['', Validators.required],
     Town: ['', Validators.required],
     diagnosis: ['', Validators.required],
