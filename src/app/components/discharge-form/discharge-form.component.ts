@@ -208,8 +208,32 @@ export class DischargeFormComponent {
        {label: 'Yes',value: 'splints',   checked: false},
        {label: 'No',value: 'splints',   checked: false},
         ]},   
-  
-  
+    {type: 'sectionTitle', title: 'OTHER:', color: '#000000'},
+     {type: 'checkbox', name: 'HepatitisA', label: "Have you ever tested positive to Hepatitis  A,  B  or C, HIV, TB, MRSA, VRE or CRE?:", options: [
+       {label: 'Yes',value: 'HepatitisA',   checked: false},
+       {label: 'No',value: 'HepatitisA',   checked: false},
+        ]},
+    {type: 'text', name: 'HepatitisA', placeHolder: 'Please specify', label: 'Please specify:'},
+    {type: 'checkbox', name: 'drinkalcohol', label: "Do you drink alcohol?", options: [
+      {label: 'Yes',value: 'drinkalcohol',   checked: false},
+      {label: 'No',value: 'drinkalcohol',   checked: false},
+       ]},
+    {type: 'checkbox', name: 'HepatitisA', label: "Have you ever had a stroke:", options: [
+       {label: 'Yes',value: 'HepatitisA',   checked: false},
+       {label: 'No',value: 'HepatitisA',   checked: false},
+        ]},
+
+      {type: 'dateRange', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
+      start: {name: 'dob', placeHolder: 'D.O.A'},
+      end: {name: 'dob', placeHolder: 'D.O.D'}
+    }},
+    {type: 'checkbox', name: 'infectiousdisease', label: "Do you have or have you been exposed to an infectious disease in the past 14 days? (e.g. Chickenpox, Measles:", options: [
+      {label: 'Yes',value: 'infectiousdisease',   checked: false},
+      {label: 'No',value: 'infectiousdisease',   checked: false},
+       ]},
+
+
+
     ]
 
   profileForm = this.formBuilder.group({
@@ -252,7 +276,9 @@ export class DischargeFormComponent {
     Dentures: ['', Validators.required],
     splints: ['', Validators.required],
     HearingAid: ['', Validators.required],
-    
+    HepatitisA: ['', Validators.required],
+    drinkalcohol:['', Validators.required],
+    infectiousdisease:['', Validators.required],
     
   });
 
