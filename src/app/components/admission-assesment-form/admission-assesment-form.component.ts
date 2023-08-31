@@ -51,7 +51,16 @@ export class AdmissionAssesmentFormComponent {
     {type: 'text', name: 'Telephone', placeHolder: 'Telephone:  Home', label: 'Telephone:  Home'},
     {type: 'text', name: 'Business', placeHolder: 'Business/ Work', label: 'Business/ Work'},
     {type: 'text', name: 'Occupation', placeHolder: 'Occupation', label: 'Occupation'},
-    {type: 'text', name: 'MaritalStatus', placeHolder: 'Marital Status', label: 'Marital Status'},
+   
+    {type: 'checkbox', name: 'MaritalStatus:', label: "Title", options: [
+      {value: 'MaritalStatus',  label: 'Single',  checked: false},
+      {value: 'MaritalStatus',  label: 'Separated',  checked: false},
+      {value: 'MaritalStatus', label: 'Married',  checked: false},
+      {value: 'MaritalStatus',  label: 'Divorced',  checked: false},
+      {value: 'MaritalStatus',  label: 'De facto',  checked: false},
+      {value: 'MaritalStatus',  label: 'Widowed',  checked: false},
+      
+    ]},
     {type: 'text', name: 'Nationality', placeHolder: 'Nationality', label: 'Nationality'},
     {type: 'text', name: 'Languages', placeHolder: 'Languages client speaks/ understands', label: 'Languages client speaks/ understands'},
     {type: 'text', name: 'Religion', placeHolder: 'Religion', label: 'Religion'},
