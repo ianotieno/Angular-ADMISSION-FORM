@@ -47,7 +47,9 @@ export class DischargeFormComponent {
     {type: 'text', name: 'details', placeHolder: 'details', label: 'details'},
     {type: 'sectionTitle', title: 'PHYSICAL DETAILS:', color: '#000000'},
 
-    {type: 'text', name: 'Hospital', placeHolder: 'Hospital/ institution referring the patient', label: 'Hospital/ institution referring the patient:'},
+    {type: 'text', name: 'Weight', placeHolder: 'What is your weight:kilograms', label: 'What is your weight:kilograms'},
+    {type: 'text', name: 'Weight', placeHolder: 'What is your weight:kilograms', label: 'What is your weight:kilograms'},
+    
     {type: 'text', name: 'Nameofreferringdoctor', placeHolder: 'Name of referring doctor', label: 'Name of referring doctor'},
     {type: 'text', name: 'Doctorscontact', placeHolder: 'Doctor’s contact', label: 'Doctor’s contact'},
     {type: 'sectionTitle', title: 'Admission Date:', color: '#000000'},
@@ -150,7 +152,7 @@ export class DischargeFormComponent {
     Drug: ['', Validators.required],
     details: ['', Validators.required],
     Latex: ['', Validators.required],
-    Surname: ['', Validators.required],
+    Weight: ['', Validators.required],
     dob: ['', Validators.required],
     Firstname: ['', Validators.required],
     Othernames: ['', Validators.required],
