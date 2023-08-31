@@ -78,6 +78,15 @@ export class AdmissionFormComponent {
       {label: 'Cash', value: 'Cash', checked: false},
       {label: 'Other (kindly explain below)', value: 'other', checked: false},
     ]},
+    {type: 'textarea', name: 'Other', placeHolder: 'kindly explain', label:'kindly explain'},
+    {type: 'sectionTitle', title: 'Videography and photography aided treatment:', color: '#000000'},
+    {type: 'sectionTitle', title: 'Creswave hospital, with your consent wishes to use videos and photos to track the progress of our clients.These videos will solely be used for this purpose and will only be shared among family and clinical staff involved in the direct care of the client. They will also be shared at the discretion of the client/ guardian.This will only happen if the family / relatives agree and sign the consent below.'
+    , color: '#000000'},
+    {type: 'sectionTitle', title: 'This will only happen if the family / relatives agree and sign the consent below', color: '#000000'},
+    
+    {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
+    {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
+    {type: 'textarea', name: 'Other', placeHolder: 'kindly explain', label:'kindly explain'},
 
   ];
 
@@ -117,6 +126,8 @@ export class AdmissionFormComponent {
     Cellphone: ['', Validators.required],
     Workphone: ['', Validators.required],
     claimpay: ['', Validators.required],
+    guardian: ['', Validators.required],
+    Nameofpatient: ['', Validators.required],
   });
 
   onSave() {
