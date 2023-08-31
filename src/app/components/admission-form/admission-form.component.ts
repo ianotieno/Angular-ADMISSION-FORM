@@ -74,10 +74,10 @@ export class AdmissionFormComponent {
     ]},
     {type: 'sectionTitle', title: 'HOW WILL YOU CLAIM  PAY FOR THIS ADMISSION?:', color: '#000000'},
     {type: 'checkbox', name: 'claimpay', label: "Pick your checkbox options", options: [
-      {label: 'Private Health Insurance (Kindly indicate which one below, ask the nurse/ admitting officer if the hospital provides for the same) ', value: 'PrivateHealth', checked: true},
-      {label: 'Nhif', value: 'Nhif', checked: false},
-      {label: 'Cash', value: 'Cash', checked: false},
-      {label: 'Other (kindly explain below)', value: 'other', checked: false},
+      {value: 'PrivateHealth', label: 'Private Health Insurance (Kindly indicate which one below, ask the nurse/ admitting officer if the hospital provides for the same) ',  checked: true},
+      {value: 'Nhif',  label: 'Nhif',  checked: false},
+      {value: 'Cash',  label: 'Cash',  checked: false},
+      {value: 'other', label: 'Other (kindly explain below)',  checked: false},
     ]},
     {type: 'textarea', name: 'Other', placeHolder: 'kindly explain', label:'kindly explain'},
     {type: 'sectionTitle', title: 'Videography and photography aided treatment:', color: '#000000'},
@@ -95,10 +95,16 @@ export class AdmissionFormComponent {
     {type: 'sectionTitle', title: 'All patients to complete.', color: '#000000'},
     {type: 'sectionTitle', title: 'By signing this form I acknowledge that:', color: '#000000'},
     {type: 'checkbox', name: 'Bysigning', label: "By signing this form I acknowledge that:", options: [
-      {label: 'Private Health Insurance (Kindly indicate which one below, ask the nurse/ admitting officer if the hospital provides for the same) ', value: 'PrivateHealth', checked: true},
-      {label: 'Nhif', value: 'Nhif', checked: false},
-      {label: 'Cash', value: 'Cash', checked: false},
-      {label: 'Other (kindly explain below)', value: 'other', checked: false},
+      {value: 'PrivateHealth', label: 'I certify that the information contained on this form is true and correct to the best of my knowledge. ',  checked: true},
+      {value: ' lossordamage ', label: 'I understand that Creswave hospital will not accept any responsibility for loss or damage to patients’ valuables.',  checked: false},
+      {value: 'Cash', label: 'I have read and understood the information, and accept the conditions, set out in this form, and have no further questions', checked: false},
+      {value: 'Cash', label: 'I understand the costs are estimates only and subject to change as a result of variations in the actual treatment received.',  checked: false},
+      {value: 'Cash', label: 'I acknowledge that it is my ultimate responsibility to confirm with my health insurer the level of cover held',  checked: false},
+      {value: 'Cash', label: 'I accept responsibility for full payment of all amounts for hospital fees and charges not funded by my insurer, and will finalize payment at time of discharge.',  checked: false},
+      {value: 'Cash', label: 'Cash',  checked: false},
+      {value: 'Cash', label: 'Cash',  checked: false},
+      
+      
     ]},
   ];
 
