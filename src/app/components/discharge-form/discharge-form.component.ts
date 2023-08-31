@@ -148,11 +148,40 @@ export class DischargeFormComponent {
       {label: 'Diet',value: 'diabetes',   checked: false},
       {label: 'Tablet',value: 'diabetes',   checked: false},
       {label: 'Insulin',value: 'diabetes',   checked: false},
-                        ]},                    
+        ]}, 
+     {type: 'checkbox', name: 'diabetes', label: "If you take insulin has your Doctor given you instructions regarding your Diabetic Medication?", options: [
+      {label: 'Yes',value: 'diabetes',   checked: false},
+      {label: 'No',value: 'diabetes',   checked: false},
+      
+        ]},                       
+   {type: 'sectionTitle', title: ' GASTROINTESTINAL :', color: '#000000'},
+   {type: 'checkbox', name: 'gastrointestinal', label: "Do you have hiatus hernia/gastrointestinal ulcers?", options: [
+    {label: 'Yes',value: 'gastrointestinal',   checked: false},
+    {label: 'No',value: 'gastrointestinal',   checked: false},
+       ]},  
+   {type: 'checkbox', name: 'specialdietary', label: "Do you have any special dietary requirements?", options: [
+    {label: 'Yes',value: 'specialdietary',   checked: false},
+    {label: 'No',value: 'specialdietary',   checked: false},
+     ]},
 
-
-
-
+     {type: 'sectionTitle', title: 'MUSCULOSKELETAL / MOBILITY:', color: '#000000'},
+     {type: 'checkbox', name: 'Mobility', label: "Mobility is ?", options: [
+       {label: 'Normal',value: 'Mobility',   checked: false},
+       {label: 'Impaired ',value: 'Mobility',   checked: false},
+        ]},
+     {type: 'checkbox', name: 'Mobility', label: "Do you use an assistive device ?", options: [
+       {label: 'Yes',value: 'Mobility',   checked: false},
+       {label: 'No',value: 'Mobility',   checked: false},
+        ]},
+    {type: 'text', name: 'Mobility', placeHolder: 'If yes, please specify which one:', label: 'If yes, please specify which one:	'},
+    
+    {type: 'checkbox', name: 'Mobility', label: "Motor development:", options: [
+      {label: 'Head control ',value: 'Mobility',   checked: false},
+      {label: 'sits ',value: 'Mobility',   checked: false},
+      {label: 'walks',value: 'Mobility',   checked: false},
+      {label: 'Hemiparesis',value: 'Mobility',   checked: false},
+      {label: 'Tremors',value: 'Mobility',   checked: false},
+       ]},
 
 
   ]
@@ -187,10 +216,9 @@ export class DischargeFormComponent {
     Respirations: ['', Validators.required],
     Shortnessofbreath: ['', Validators.required],
     diabetes: ['', Validators.required],
-    doctor: ['', Validators.required],
-    Relationship: ['', Validators.required],
-    
-    Cellphone: ['', Validators.required],
+    gastrointestinal: ['', Validators.required],
+    specialdietary: ['', Validators.required],
+    Mobility: ['', Validators.required],
     Workphone: ['', Validators.required],
     claimpay: ['', Validators.required],
     guardian: ['', Validators.required],
