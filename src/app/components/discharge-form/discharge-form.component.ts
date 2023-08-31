@@ -267,6 +267,56 @@ export class DischargeFormComponent {
      ]},
      {type: 'text', name: 'interpreter', placeHolder: 'If yes Please Enter Name of person:', label: 'If yes Please Enter Name of person'},
      {type: 'text', name: 'interpreter', placeHolder: 'If yes Please Enter Phone number', label: 'If yes Please Enter Phone number'},
+    
+     {type: 'checkbox', name: 'bloodthinning', label: "Do you take any blood thinning/arthritis medication?(e.g. Warfarin, Plavix, Asprin) :", options: [
+      {label: 'Yes',value: 'bloodthinning',   checked: false},
+      {label: 'No',value: 'bloodthinning',   checked: false},
+       ]},
+     {type: 'text', name: 'bloodthinning', placeHolder: 'If yes Please specify', label: 'If yes Please specify'},
+    
+     {type: 'sectionTitle', title: 'NEURO:', color: '#000000'},
+     {type: 'checkbox', name: 'Sensation', label: "Sensation:", options: [
+      {label: 'Intact',value: 'Sensation',   checked: false},
+      {label: 'Diminished',value: 'Sensation',   checked: false},
+      {label: 'Absent',value: 'Sensation',   checked: false},
+       ]},
+      {type: 'checkbox', name: 'Verbalresponse', label: "Verbal response:", options: [
+        {label: 'Alert',value: 'Verbalresponse',   checked: false},
+        {label: 'Confused',value: 'Verbalresponse',   checked: false},
+        {label: 'Inappropriate',value: 'Verbalresponse',   checked: false},
+        {label: 'incomprehensible',value: 'Verbalresponse',   checked: false},
+        {label: 'No response',value: 'Verbalresponse',   checked: false},
+        {label: 'Aphasia',value: 'Verbalresponse',   checked: false},
+        {label: 'Non expressive',value: 'Verbalresponse',   checked: false},
+        {label: 'Receptive',value: 'Verbalresponse',   checked: false},
+         ]},
+         {type: 'checkbox', name: 'Memorydeficit', label: "Memory deficit:", options: [
+          {label: 'Yes',value: 'Memorydeficit',   checked: false},
+          {label: 'No',value: 'Memorydeficit',   checked: false},
+           ]},
+        
+        {type: 'checkbox', name: 'decisionmaking', label: "Impaired decision making:", options: [
+          {label: 'Yes',value: 'decisionmaking',   checked: false},
+          {label: 'No',value: 'decisionmaking',   checked: false},
+           ]},
+
+       {type: 'checkbox', name: 'Sleepaids', label: "Sleep aids:", options: [
+          {label: 'Yes',value: 'Sleepaids',   checked: false},
+          {label: 'No',value: 'Sleepaids',   checked: false},
+           ]},
+      {type: 'text', name: 'Sleepaids', placeHolder: 'If yes Please specify', label: 'If yes Please specify'},
+
+      {type: 'checkbox', name: 'Seizures', label: "Seizures :", options: [
+        {label: 'Yes',value: 'Seizures',   checked: false},
+        {label: 'No',value: 'Seizures',   checked: false},
+         ]},
+    {type: 'sectionTitle', title: 'Circulation:', color: '#000000'},
+    {type: 'checkbox', name: 'whereapplicable', label: "Tick where applicable:", options: [
+      {label: 'Arrythmias',value: 'whereapplicable',   checked: false},
+      {label: 'Hypotensive',value: 'whereapplicable',   checked: false},
+      {label: 'Hypertensive',value: 'whereapplicable',   checked: false},
+       ]},
+
     ]
 
   profileForm = this.formBuilder.group({
@@ -315,6 +365,13 @@ export class DischargeFormComponent {
     surgicalproblems:['', Validators.required],
     skinulcers:['', Validators.required],
     interpreter:['', Validators.required],
+    bloodthinning:['', Validators.required],
+    Sensation:['', Validators.required],
+    Memorydeficit:['', Validators.required],
+    decisionmaking:['', Validators.required],
+    Sleepaids :['', Validators.required],
+    Seizures :['', Validators.required],
+    whereapplicable:['', Validators.required],
   });
 
   saveForm() {
