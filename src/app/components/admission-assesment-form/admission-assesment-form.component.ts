@@ -291,20 +291,20 @@ export class AdmissionAssesmentFormComponent {
           {label: 'No',value: 'Memorydeficit',   checked: false},
            ]},
         
-        {type: 'checkbox', name: 'decisionmaking', label: "Impaired decision making:", options: [
+        {type: 'radios', name: 'decisionmaking', label: "Impaired decision making:", options: [
           {label: 'Yes',value: 'decisionmaking',   checked: false},
-          {label: 'No',value: 'decisionmaking',   checked: false},
+          {label: 'No',value: 'decisionmaking',   checked: true},
            ]},
 
-       {type: 'checkbox', name: 'Sleepaids', label: "Sleep aids:", options: [
+       {type: 'radios', name: 'Sleepaids', label: "Sleep aids:", options: [
           {label: 'Yes',value: 'Sleepaids',   checked: false},
-          {label: 'No',value: 'Sleepaids',   checked: false},
+          {label: 'No',value: 'Sleepaids',   checked: true},
            ]},
       {type: 'text', name: 'Sleepaids', placeHolder: 'If yes Please specify', label: 'If yes Please specify'},
 
-      {type: 'checkbox', name: 'Seizures', label: "Seizures :", options: [
+      {type: 'radios', name: 'Seizures', label: "Seizures :", options: [
         {label: 'Yes',value: 'Seizures',   checked: false},
-        {label: 'No',value: 'Seizures',   checked: false},
+        {label: 'No',value: 'Seizures',   checked: true},
          ]},
     {type: 'sectionTitle', title: 'Circulation:', color: '#000000'},
     {type: 'checkbox', name: 'whereapplicable', label: "Tick where applicable:", options: [
@@ -312,9 +312,9 @@ export class AdmissionAssesmentFormComponent {
       {label: 'Hypotensive',value: 'whereapplicable',   checked: false},
       {label: 'Hypertensive',value: 'whereapplicable',   checked: false},
        ]},
-    {type: 'checkbox', name: 'Pulse', label: "Pulse:", options: [
+    {type: 'radios', name: 'Pulse', label: "Pulse:", options: [
         {label: 'Regular',value: 'Pulse',   checked: false},
-        {label: 'Irregular',value: 'Pulse',   checked: false},
+        {label: 'Irregular',value: 'Pulse',   checked: true},
          ]},
      {type: 'checkbox', name: 'Skin', label: "Skin:", options: [
         {label: 'Pale',value: 'Skin',   checked: false},
@@ -332,9 +332,9 @@ export class AdmissionAssesmentFormComponent {
         {label: 'Macular',value: 'Edema',   checked: false},
          ]},
       {type: 'sectionTitle', title: 'Psychosocial', color: '#000000'},  
-      {type: 'checkbox', name: 'Selfinjurious', label: "Self injurious behavior:", options: [
+      {type: 'radios', name: 'Selfinjurious', label: "Self injurious behavior:", options: [
         {label: 'Yes',value: 'Selfinjurious',   checked: false},
-        {label: 'No',value: 'Selfinjurious',   checked: false},
+        {label: 'No',value: 'Selfinjurious',   checked: true},
          ]},
      {type: 'radios', name: 'Aggressivebehavior', label: "Aggressive behavior:", options: [
         {label: 'Yes',value: 'Aggressivebehavior',   checked: false},
