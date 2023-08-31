@@ -90,7 +90,17 @@ export class DischargeFormComponent {
       {label: 'Yes',value: 'irregularheartbeat',   checked: false},
       {label: 'No',value: 'irregularheartbeat',   checked: false},
         ]},
-    
+
+    {type: 'checkbox', name: 'tendencytobleed', label: "Do you have a tendency to bleed, clot or bruise easily?", options: [
+      {label: 'Yes',value: 'tendencytobleed',   checked: false},
+      {label: 'No',value: 'tendencytobleed',   checked: false},
+        ]},
+
+    {type: 'checkbox', name: 'irregularheartbeat', label: "Do you have an irregular heart beat?", options: [
+      {label: 'Yes',value: 'irregularheartbeat',   checked: false},
+      {label: 'No',value: 'irregularheartbeat',   checked: false},
+            ]},
+        
 
     
     
