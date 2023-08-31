@@ -231,9 +231,42 @@ export class DischargeFormComponent {
       {label: 'Yes',value: 'infectiousdisease',   checked: false},
       {label: 'No',value: 'infectiousdisease',   checked: false},
        ]},
+   {type: 'checkbox', name: 'surgicalproblems', label: "Do you have any other medical or surgical problems?(e.g. Epilepsy, Liver, Kidney, Psychiatric):", options: [
+       {label: 'Yes',value: 'surgicalproblems',   checked: false},
+       {label: 'No',value: 'surgicalproblems',   checked: false},
+        ]},
 
+    {type: 'text', name: 'Mobility', placeHolder: 'If yes, please specify which one:', label: 'If yes, please specify which one:	'}, 
+    {type: 'checkbox', name: 'surgicalproblems', label: "Have you ever been diagnosed with cancer:", options: [
+      {label: 'Yes',value: 'cancer',   checked: false},
+      {label: 'No',value: 'cancer',   checked: false},
+       ]},
 
+   {type: 'text', name: 'Mobility', placeHolder: 'If yes, please specify the type of cancer:', label: 'If yes, please specify the type of cancer:	'},
+   {type: 'dateRange', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
+    start: {name: 'dob', placeHolder: 'D.O.A'},
+    end: {name: 'dob', placeHolder: 'D.O.D'}
+  }}, 
 
+  
+   {type: 'checkbox', name: 'skinulcers', label: "Do you currently have any skin wounds, pressure sores or skin ulcers:", options: [
+    {label: 'Yes',value: 'skinulcers',   checked: false},
+    {label: 'No',value: 'skinulcers',   checked: false},
+     ]},
+  {type: 'text', name: 'skinulcers', placeHolder: 'If yes, please specify which one:', label: 'If yes, please specify which one:	'}, 
+
+  {type: 'checkbox', name: 'interpreter', label: "Do you require an interpreter:", options: [
+   {label: 'Yes',value: 'interpreter',   checked: false},
+   {label: 'No',value: 'interpreter',   checked: false},
+   ]},
+   {type: 'text', name: 'interpreter', placeHolder: 'If yes Please specify Language', label: 'Please specify Language'},
+
+  {type: 'checkbox', name: 'interpreter', label: "Do you have someone to interpret for you:", options: [
+    {label: 'Yes',value: 'interpreter',   checked: false},
+    {label: 'No',value: 'interpreter',   checked: false},
+     ]},
+     {type: 'text', name: 'interpreter', placeHolder: 'If yes Please Enter Name of person:', label: 'If yes Please Enter Name of person'},
+     {type: 'text', name: 'interpreter', placeHolder: 'If yes Please Enter Phone number', label: 'If yes Please Enter Phone number'},
     ]
 
   profileForm = this.formBuilder.group({
@@ -279,7 +312,9 @@ export class DischargeFormComponent {
     HepatitisA: ['', Validators.required],
     drinkalcohol:['', Validators.required],
     infectiousdisease:['', Validators.required],
-    
+    surgicalproblems:['', Validators.required],
+    skinulcers:['', Validators.required],
+    interpreter:['', Validators.required],
   });
 
   saveForm() {
