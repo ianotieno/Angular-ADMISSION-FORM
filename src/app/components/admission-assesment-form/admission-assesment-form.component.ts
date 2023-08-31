@@ -26,19 +26,19 @@ export class AdmissionAssesmentFormComponent {
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},  
     {type: 'radios', name: 'claimpay', label: "Food ", options: [
       {label: 'Yes',value: 'Food',   checked: false},
-      {label: 'No',value: 'Food',   checked: false},
+      {label: 'No',value: 'Food',   checked: true},
         ]},  
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
     {type: 'radios', name: 'claimpay', label: "Latex:", options: [
       {label: 'Yes',value: 'Latex',   checked: false},
-      {label: 'No',value: 'Latex',   checked: false},
+      {label: 'No',value: 'Latex',   checked: true},
         ]},  
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
     {type: 'radios', name: 'claimpay', label: " ", options: [
       {label: 'Other:Yes',value: 'Food',   checked: false},
-      {label: 'No',value: 'Food',   checked: false},
+      {label: 'No',value: 'Food',   checked: true},
         ]},  
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
     {type: 'sectionTitle', title: 'PHYSICAL DETAILS:', color: '#000000'},
@@ -47,28 +47,28 @@ export class AdmissionAssesmentFormComponent {
     {type: 'text', name: 'height', placeHolder: 'What is your height:centimeters', label: 'What is your height:centimeters'},
     
     {type: 'sectionTitle', title: 'PREVIOUS OPERATIONS:', color: '#000000'},
-    {type: 'checkbox', name: 'previousoperations', label: "Have you had any previous operations ", options: [
+    {type: 'radios', name: 'previousoperations', label: "Have you had any previous operations ", options: [
       {label: 'Yes',value: 'Food',   checked: false},
-      {label: 'No',value: 'Food',   checked: false},
+      {label: 'No',value: 'Food',   checked: true},
         ]},
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
     {type: 'sectionTitle', title: 'CARDIAC', color: '#000000'},
-    {type: 'checkbox', name: 'heartattack', label: "Have you ever had a heart attack? ", options: [
+    {type: 'radios', name: 'heartattack', label: "Have you ever had a heart attack? ", options: [
       {label: 'Yes',value: 'heartattack',   checked: false},
-      {label: 'No',value: 'heartattack',   checked: false},
+      {label: 'No',value: 'heartattack',   checked: true},
         ]},
     {type: 'text', name: 'year', placeHolder: 'year', label: 'year'}, 
 
-    {type: 'checkbox', name: 'heartsurgery', label: "Have you ever had heart surgery? ", options: [
+    {type: 'radios', name: 'heartsurgery', label: "Have you ever had heart surgery? ", options: [
       {label: 'Yes',value: 'heartsurgery',   checked: false},
-      {label: 'No',value: 'heartsurgery',   checked: false},
+      {label: 'No',value: 'heartsurgery',   checked: true},
         ]},
     {type: 'text', name: 'year', placeHolder: 'year', label: 'year'},  
 
-    {type: 'checkbox', name: 'pacemaker', label: "Do you have a pacemaker/internal defibrillator? ", options: [
+    {type: 'radios', name: 'pacemaker', label: "Do you have a pacemaker/internal defibrillator? ", options: [
       {label: 'Yes',value: 'pacemaker',   checked: false},
-      {label: 'No',value: 'pacemaker',   checked: false},
+      {label: 'No',value: 'pacemaker',   checked: true},
         ]},   
     {type: 'groupedInputs', name: 'pacemaker', label:'If you have a pacemaker', inputs: [
       {type: 'text', name: 'Make', placeHolder: 'Make', label: 'Make'},
@@ -76,64 +76,64 @@ export class AdmissionAssesmentFormComponent {
       {type: 'text', name: 'Lastchecked', placeHolder: 'Last checked', label: 'Last checked'},
     ]},
 
-   {type: 'checkbox', name: 'heartproblems', label: "Do you have any other heart problems? ", options: [
+   {type: 'radios', name: 'heartproblems', label: "Do you have any other heart problems? ", options: [
       {label: 'Yes',value: 'heartproblems',   checked: false},
-      {label: 'No',value: 'heartproblems',   checked: false},
+      {label: 'No',value: 'heartproblems',   checked: true},
         ]},
     {type: 'text', name: 'heartproblems', placeHolder: 'If yes, specify:', label: 'If yes, specify:'}, 
     
-    {type: 'checkbox', name: 'irregularheartbeat', label: "Do you have an irregular heart beat?", options: [
+    {type: 'radios', name: 'irregularheartbeat', label: "Do you have an irregular heart beat?", options: [
       {label: 'Yes',value: 'irregularheartbeat',   checked: false},
-      {label: 'No',value: 'irregularheartbeat',   checked: false},
+      {label: 'No',value: 'irregularheartbeat',   checked: true},
         ]},
 
-    {type: 'checkbox', name: 'tendencytobleed', label: "Do you have a tendency to bleed, clot or bruise easily?", options: [
+    {type: 'radios', name: 'tendencytobleed', label: "Do you have a tendency to bleed, clot or bruise easily?", options: [
       {label: 'Yes',value: 'tendencytobleed',   checked: false},
-      {label: 'No',value: 'tendencytobleed',   checked: false},
+      {label: 'No',value: 'tendencytobleed',   checked: true},
         ]},
 
-    {type: 'checkbox', name: 'bloodpressure', label: "Have you ever had high blood pressure?", options: [
+    {type: 'radios', name: 'bloodpressure', label: "Have you ever had high blood pressure?", options: [
       {label: 'Yes',value: 'bloodpressure',   checked: false},
-      {label: 'No',value: 'blood pressure',   checked: false},
+      {label: 'No',value: 'blood pressure',   checked: true},
             ]},
         
     {type: 'sectionTitle', title: 'RESPIRATORY:', color: '#000000'},
-    {type: 'checkbox', name: ' smoke', label: "Do you smoke?", options: [
+    {type: 'radios', name: ' smoke', label: "Do you smoke?", options: [
       {label: 'Yes',value: ' smoke',   checked: false},
-      {label: 'No',value: ' smoke',   checked: false},
+      {label: 'No',value: ' smoke',   checked: true},
             ]},
     {type: 'text', name: ' smoking', placeHolder: 'Any history of smoking:', label: 'Any history of smoking	'}, 
 
-    {type: 'checkbox', name: 'Asthma', label: "Do you have Asthma?", options: [
+    {type: 'radios', name: 'Asthma', label: "Do you have Asthma?", options: [
       {label: 'Yes',value: 'Asthma',   checked: false},
-      {label: 'No',value: 'Asthma',   checked: false},
+      {label: 'No',value: 'Asthma',   checked: true},
        ]},
-    {type: 'checkbox', name: 'Bronchitis', label: "Do you have Bronchitis?", options: [
+    {type: 'radios', name: 'Bronchitis', label: "Do you have Bronchitis?", options: [
        {label: 'Yes',value: 'Bronchitis',   checked: false},
-       {label: 'No',value: 'Bronchitis',   checked: false},
+       {label: 'No',value: 'Bronchitis',   checked: true},
         ]},                  
-    {type: 'checkbox', name: 'Sleepapnea', label: "Do you have Sleep apnea?", options: [
+    {type: 'radios', name: 'Sleepapnea', label: "Do you have Sleep apnea?", options: [
         {label: 'Yes',value: 'Sleepapnea',   checked: false},
-        {label: 'No',value: 'Sleepapnea',   checked: false},
+        {label: 'No',value: 'Sleepapnea',   checked: true},
                 ]},
-      {type: 'checkbox', name: 'nebulizer', label: "Do you use a nebulizer, puffer or EPAP/CPAP machine or home Oxygen? (please bring puffers with you)?", options: [
+      {type: 'radios', name: 'nebulizer', label: "Do you use a nebulizer, puffer or EPAP/CPAP machine or home Oxygen? (please bring puffers with you)?", options: [
          {label: 'Yes',value: 'nebulizer',   checked: false},
-         {label: 'No',value: 'nebulizer',   checked: false},
+         {label: 'No',value: 'nebulizer',   checked: true},
             ]},         
      {type: 'checkbox', name: 'Respirations', label: "Respirations", options: [
          {label: 'Regular ',value: 'Respirations',   checked: false},
          {label: 'Unlabored',value: 'Respirations',   checked: false},
          {label: 'Labored',value: 'Respirations',   checked: false},
            ]}, 
-    {type: 'checkbox', name: 'Shortnessofbreath', label: "Shortness of breath ?", options: [
+    {type: 'radios', name: 'Shortnessofbreath', label: "Shortness of breath ?", options: [
        {label: 'Yes',value: 'Shortnessofbreath',   checked: false},
-       {label: 'No',value: 'Shortnessofbreath',   checked: false},
+       {label: 'No',value: 'Shortnessofbreath',   checked: true},
                ]},      
            
     {type: 'sectionTitle', title: ' DIABETES :', color: '#000000'},
-    {type: 'checkbox', name: 'diabetes', label: "Do you have diabetes?", options: [
+    {type: 'radios', name: 'diabetes', label: "Do you have diabetes?", options: [
       {label: 'Yes',value: 'diabetes',   checked: false},
-      {label: 'No',value: 'diabetes',   checked: false},
+      {label: 'No',value: 'diabetes',   checked: true},
        ]}, 
     {type: 'checkbox', name: 'diabetes', label: "If yes?", options: [
       {label: 'Type I',value: 'diabetes',   checked: false},
@@ -145,29 +145,29 @@ export class AdmissionAssesmentFormComponent {
       {label: 'Tablet',value: 'diabetes',   checked: false},
       {label: 'Insulin',value: 'diabetes',   checked: false},
         ]}, 
-     {type: 'checkbox', name: 'diabetes', label: "If you take insulin has your Doctor given you instructions regarding your Diabetic Medication?", options: [
+     {type: 'radios', name: 'diabetes', label: "If you take insulin has your Doctor given you instructions regarding your Diabetic Medication?", options: [
       {label: 'Yes',value: 'diabetes',   checked: false},
-      {label: 'No',value: 'diabetes',   checked: false},
+      {label: 'No',value: 'diabetes',   checked: true},
       
         ]},                       
    {type: 'sectionTitle', title: ' GASTROINTESTINAL :', color: '#000000'},
-   {type: 'checkbox', name: 'gastrointestinal', label: "Do you have hiatus hernia/gastrointestinal ulcers?", options: [
+   {type: 'radios', name: 'gastrointestinal', label: "Do you have hiatus hernia/gastrointestinal ulcers?", options: [
     {label: 'Yes',value: 'gastrointestinal',   checked: false},
-    {label: 'No',value: 'gastrointestinal',   checked: false},
+    {label: 'No',value: 'gastrointestinal',   checked: true},
        ]},  
-   {type: 'checkbox', name: 'specialdietary', label: "Do you have any special dietary requirements?", options: [
+   {type: 'radio', name: 'specialdietary', label: "Do you have any special dietary requirements?", options: [
     {label: 'Yes',value: 'specialdietary',   checked: false},
-    {label: 'No',value: 'specialdietary',   checked: false},
+    {label: 'No',value: 'specialdietary',   checked: true},
      ]},
 
      {type: 'sectionTitle', title: 'MUSCULOSKELETAL / MOBILITY:', color: '#000000'},
-     {type: 'checkbox', name: 'Mobility', label: "Mobility is ?", options: [
+     {type: 'radios', name: 'Mobility', label: "Mobility is ?", options: [
        {label: 'Normal',value: 'Mobility',   checked: false},
-       {label: 'Impaired ',value: 'Mobility',   checked: false},
+       {label: 'Impaired ',value: 'Mobility',   checked: true},
         ]},
-     {type: 'checkbox', name: 'Mobility', label: "Do you use an assistive device :", options: [
+     {type: 'radios', name: 'Mobility', label: "Do you use an assistive device :", options: [
        {label: 'Yes',value: 'Mobility',   checked: false},
-       {label: 'No',value: 'Mobility',   checked: false},
+       {label: 'No',value: 'Mobility',   checked: true},
         ]},
     {type: 'text', name: 'Mobility', placeHolder: 'If yes, please specify which one:', label: 'If yes, please specify which one:	'},
     
@@ -188,35 +188,35 @@ export class AdmissionAssesmentFormComponent {
      {type: 'text', name: 'Dressing', placeHolder: 'Dressing:', label: 'Dressing:'},
 
      {type: 'sectionTitle', title: 'PROSTHESIS / AIDS:', color: '#000000'},
-     {type: 'checkbox', name: 'glasses', label: "Do you wear glasses / contact lenses:", options: [
+     {type: 'radios', name: 'glasses', label: "Do you wear glasses / contact lenses:", options: [
        {label: 'Yes',value: 'glasses',   checked: false},
-       {label: 'No',value: 'glasses',   checked: false},
+       {label: 'No',value: 'glasses',   checked: true},
         ]}, 
-     {type: 'checkbox', name: 'HearingAid', label: "Hearing Aid or other hearing appliance:", options: [
+     {type: 'radios', name: 'HearingAid', label: "Hearing Aid or other hearing appliance:", options: [
        {label: 'Yes',value: 'HearingAid',   checked: false},
-       {label: 'No',value: 'HearingAid',   checked: false},
+       {label: 'No',value: 'HearingAid',   checked: true},
         ]}, 
-    {type: 'checkbox', name: 'Dentures', label: "Dentures/Caps/Crowns/Loose teeth:", options: [
+    {type: 'radios', name: 'Dentures', label: "Dentures/Caps/Crowns/Loose teeth:", options: [
        {label: 'Yes',value: 'Dentures',   checked: false},
-       {label: 'No',value: 'Dentures',   checked: false},
+       {label: 'No',value: 'Dentures',   checked: true},
         ]},   
-    {type: 'checkbox', name: 'splints', label: "Do you wear any type of splints:", options: [
+    {type: 'radios', name: 'splints', label: "Do you wear any type of splints:", options: [
        {label: 'Yes',value: 'splints',   checked: false},
-       {label: 'No',value: 'splints',   checked: false},
+       {label: 'No',value: 'splints',   checked: true},
         ]},   
     {type: 'sectionTitle', title: 'OTHER:', color: '#000000'},
-     {type: 'checkbox', name: 'HepatitisA', label: "Have you ever tested positive to Hepatitis  A,  B  or C, HIV, TB, MRSA, VRE or CRE?:", options: [
+     {type: 'radios', name: 'HepatitisA', label: "Have you ever tested positive to Hepatitis  A,  B  or C, HIV, TB, MRSA, VRE or CRE?:", options: [
        {label: 'Yes',value: 'HepatitisA',   checked: false},
-       {label: 'No',value: 'HepatitisA',   checked: false},
+       {label: 'No',value: 'HepatitisA',   checked: true},
         ]},
     {type: 'text', name: 'HepatitisA', placeHolder: 'Please specify', label: 'Please specify:'},
-    {type: 'checkbox', name: 'drinkalcohol', label: "Do you drink alcohol?", options: [
+    {type: 'radios', name: 'drinkalcohol', label: "Do you drink alcohol?", options: [
       {label: 'Yes',value: 'drinkalcohol',   checked: false},
-      {label: 'No',value: 'drinkalcohol',   checked: false},
+      {label: 'No',value: 'drinkalcohol',   checked: true},
        ]},
-    {type: 'checkbox', name: 'HepatitisA', label: "Have you ever had a stroke:", options: [
+    {type: 'radios', name: 'HepatitisA', label: "Have you ever had a stroke:", options: [
        {label: 'Yes',value: 'HepatitisA',   checked: false},
-       {label: 'No',value: 'HepatitisA',   checked: false},
+       {label: 'No',value: 'HepatitisA',   checked: true},
         ]},
 
       {type: 'dateRange', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
@@ -336,9 +336,9 @@ export class AdmissionAssesmentFormComponent {
         {label: 'Yes',value: 'Selfinjurious',   checked: false},
         {label: 'No',value: 'Selfinjurious',   checked: false},
          ]},
-     {type: 'checkbox', name: 'Aggressivebehavior', label: "Aggressive behavior:", options: [
+     {type: 'radios', name: 'Aggressivebehavior', label: "Aggressive behavior:", options: [
         {label: 'Yes',value: 'Aggressivebehavior',   checked: false},
-        {label: 'No',value: 'Aggressivebehavior',   checked: false},
+        {label: 'No',value: 'Aggressivebehavior',   checked: true},
          ]}, 
      {type: 'textarea', name: 'disruptivebehavior', placeHolder: 'Frequency of disruptive behavior', label: 'Frequency of disruptive behavior:'},  
      {type: 'checkbox', name: 'Behavior', label: "Behavior:", options: [
@@ -349,20 +349,20 @@ export class AdmissionAssesmentFormComponent {
        ]}, 
        {type: 'textarea', name: 'Behavior', placeHolder: 'Other Behaviors', label: 'Other Behaviors:'},
 
-       {type: 'checkbox', name: 'Delusions', label: "Delusions and/ or hallucinations:", options: [
+       {type: 'radios', name: 'Delusions', label: "Delusions and/ or hallucinations:", options: [
         {label: 'Yes',value: 'Delusions',   checked: false},
-        {label: 'No',value: 'Delusions',   checked: false},
+        {label: 'No',value: 'Delusions',   checked: true},
          ]},
       {type: 'sectionTitle', title: 'Medications and treatments', color: '#000000'},
-      {type: 'checkbox', name: 'MedicationAndIntendedDoses', label: "Does patient have all the medication and intended doses of the same:", options: [
+      {type: 'radios', name: 'MedicationAndIntendedDoses', label: "Does patient have all the medication and intended doses of the same:", options: [
         {label: 'Yes',value: 'MedicationAndIntendedDoses',   checked: false},
-        {label: 'No',value: 'MedicationAndIntendedDoses',   checked: false},
+        {label: 'No',value: 'MedicationAndIntendedDoses',   checked: true},
          ]},
       {type: 'textarea', name: 'descripancies', placeHolder: 'Were there any noted descripancies', label: 'Were there any noted descripancies:'},  
     
-      {type: 'checkbox', name: 'DiagnosisOrMedication', label: "Are vital signs required related to a diagnosis or medication", options: [
+      {type: 'radios', name: 'DiagnosisOrMedication', label: "Are vital signs required related to a diagnosis or medication", options: [
         {label: 'Yes',value: 'DiagnosisOrMedication',   checked: false},
-        {label: 'No',value: 'DiagnosisOrMedication',   checked: false},
+        {label: 'No',value: 'DiagnosisOrMedication',   checked: true},
          ]},
          {type: 'textarea', name: 'MedsAndDosage', placeHolder: 'State the meds and dosage the patient is on', label: 'Were there any noted descripancies:'},  
        
@@ -376,10 +376,7 @@ export class AdmissionAssesmentFormComponent {
      {type: 'sectionTitle', title: 'RN DETAILS', color: '#000000'},
      {type: 'text', name: 'Name', placeHolder: 'RN Name', label:'RN Name '},
     {type: 'textarea', name: 'Signature', placeHolder: 'Signature :', label:'Signature :'},
-    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+    {type: 'date', name: 'dob', label: 'Enter a Date:', hint: 'MM/DD/YYYY' },
     ]
   admissionForm = this.formBuilder.group({
     patientName: ['', Validators.required],
@@ -449,6 +446,7 @@ export class AdmissionAssesmentFormComponent {
     ClinicalNotes:['', Validators.required],
     Name:['', Validators.required],
     Signature:['', Validators.required],
+    claimpay:['', Validators.required],
   });
   onSave() {
 
