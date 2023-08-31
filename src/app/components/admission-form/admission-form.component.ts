@@ -20,6 +20,7 @@ export class AdmissionFormComponent {
     {type: 'text', name: 'Nameofreferringdoctor', placeHolder: 'Name of referring doctor', label: 'Name of referring doctor'},
     {type: 'text', name: 'Doctorscontact', placeHolder: 'Doctor’s contact', label: 'Doctor’s contact'},
     {type: 'sectionTitle', title: 'Admission Date:', color: '#000000'},
+    
     {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
       start: {name: 'dob', placeHolder: 'D.O.A'},
       end: {name: 'dob', placeHolder: 'D.O.D'}
@@ -86,8 +87,19 @@ export class AdmissionFormComponent {
     
     {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
     {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
-    {type: 'textarea', name: 'Other', placeHolder: 'kindly explain', label:'kindly explain'},
-
+    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
+      start: {name: 'dob', placeHolder: 'D.O.A'},
+      end: {name: 'dob', placeHolder: 'D.O.D'}
+    }},
+    {type: 'sectionTitle', title: 'SECTION C: ACKNOWLEDGMENT', color: '#000000'},
+    {type: 'sectionTitle', title: 'All patients to complete.', color: '#000000'},
+    {type: 'sectionTitle', title: 'By signing this form I acknowledge that:', color: '#000000'},
+    {type: 'checkbox', name: 'Bysigning', label: "By signing this form I acknowledge that:", options: [
+      {label: 'Private Health Insurance (Kindly indicate which one below, ask the nurse/ admitting officer if the hospital provides for the same) ', value: 'PrivateHealth', checked: true},
+      {label: 'Nhif', value: 'Nhif', checked: false},
+      {label: 'Cash', value: 'Cash', checked: false},
+      {label: 'Other (kindly explain below)', value: 'other', checked: false},
+    ]},
   ];
 
   admissionForm = this.formBuilder.group({
@@ -128,6 +140,7 @@ export class AdmissionFormComponent {
     claimpay: ['', Validators.required],
     guardian: ['', Validators.required],
     Nameofpatient: ['', Validators.required],
+    Bysigning: ['', Validators.required],
   });
 
   onSave() {
