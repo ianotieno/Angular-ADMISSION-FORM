@@ -73,17 +73,23 @@ export class DischargeFormComponent {
     {type: 'checkbox', name: 'pacemaker', label: "Do you have a pacemaker/internal defibrillator? ", options: [
       {label: 'Yes',value: 'pacemaker',   checked: false},
       {label: 'No',value: 'pacemaker',   checked: false},
-        ]},
-    {type: 'text', name: 'year', placeHolder: 'year', label: 'year'},    
-    {type: 'groupedInputs', name: 'Residential Address:', label:'If you have a pacemaker', inputs: [
+        ]},   
+    {type: 'groupedInputs', name: 'pacemaker', label:'If you have a pacemaker', inputs: [
       {type: 'text', name: 'Make', placeHolder: 'Make', label: 'Make'},
       {type: 'text', name: 'Model', placeHolder: 'Model', label: 'Model'},
       {type: 'text', name: 'Lastchecked', placeHolder: 'Last checked', label: 'Last checked'},
     ]},
 
+   {type: 'checkbox', name: 'heartproblems', label: "Do you have any other heart problems? ", options: [
+      {label: 'Yes',value: 'heartproblems',   checked: false},
+      {label: 'No',value: 'heartproblems',   checked: false},
+        ]},
+    {type: 'text', name: 'heartproblems', placeHolder: 'If yes, specify:', label: 'If yes, specify:'}, 
     
-    
-    
+    {type: 'checkbox', name: 'irregularheartbeat', label: "Do you have an irregular heart beat?", options: [
+      {label: 'Yes',value: 'irregularheartbeat',   checked: false},
+      {label: 'No',value: 'irregularheartbeat',   checked: false},
+        ]},
     
 
     
@@ -117,8 +123,8 @@ export class DischargeFormComponent {
     Make: ['', Validators.required],
     Model: ['', Validators.required],
     Lastchecked: ['', Validators.required],
-    Telephone: ['', Validators.required],
-    Business: ['', Validators.required],
+    heartproblems: ['', Validators.required],
+    irregularheartbeat: ['', Validators.required],
     mobility: ['', Validators.required],
     motor: ['', Validators.required],
     occupation: ['', Validators.required],
