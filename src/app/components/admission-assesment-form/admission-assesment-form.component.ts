@@ -16,7 +16,7 @@ export class AdmissionAssesmentFormComponent {
     { type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address' },
     { type: 'text', name: 'Postcode', placeHolder: 'Postcode', label: 'Postcode' },
 
-    { type: 'date', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY' },
+    { type: 'date', name: 'dob', label: 'Enter a Date :', hint: 'MM/DD/YYYY' },
 
     { type: 'text', name: 'reaction', placeHolder: 'reaction', label: 'Have you ever had a reaction to:' },
     {
@@ -561,6 +561,7 @@ export class AdmissionAssesmentFormComponent {
     Name: ['', Validators.required],
     Signature: ['', Validators.required],
     claimpay: ['', Validators.required],
+    tendencytobleed: ['', Validators.required],
   });
   onSave() {
 
