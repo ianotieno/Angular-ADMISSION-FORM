@@ -129,11 +129,30 @@ export class DischargeFormComponent {
          {label: 'Unlabored',value: 'Respirations',   checked: false},
          {label: 'Labored',value: 'Respirations',   checked: false},
            ]}, 
-     {type: 'checkbox', name: 'Shortnessofbreath', label: "Shortness of breath ?", options: [
+    {type: 'checkbox', name: 'Shortnessofbreath', label: "Shortness of breath ?", options: [
        {label: 'Yes',value: 'Shortnessofbreath',   checked: false},
        {label: 'No',value: 'Shortnessofbreath',   checked: false},
                ]},      
            
+    {type: 'sectionTitle', title: ' DIABETES :', color: '#000000'},
+    {type: 'checkbox', name: 'diabetes', label: "Do you have diabetes?", options: [
+      {label: 'Yes',value: 'diabetes',   checked: false},
+      {label: 'No',value: 'diabetes',   checked: false},
+       ]}, 
+    {type: 'checkbox', name: 'diabetes', label: "If yes?", options: [
+      {label: 'Type I',value: 'diabetes',   checked: false},
+      {label: 'Type II',value: 'diabetes',   checked: false},
+      {label: 'Unsure',value: 'diabetes',   checked: false},
+        ]},
+    {type: 'checkbox', name: 'diabetes', label: "Controlled by", options: [
+      {label: 'Diet',value: 'diabetes',   checked: false},
+      {label: 'Tablet',value: 'diabetes',   checked: false},
+      {label: 'Insulin',value: 'diabetes',   checked: false},
+                        ]},                    
+
+
+
+
 
 
   ]
@@ -167,7 +186,7 @@ export class DischargeFormComponent {
     nebulizer: ['', Validators.required],
     Respirations: ['', Validators.required],
     Shortnessofbreath: ['', Validators.required],
-    Name: ['', Validators.required],
+    diabetes: ['', Validators.required],
     doctor: ['', Validators.required],
     Relationship: ['', Validators.required],
     
