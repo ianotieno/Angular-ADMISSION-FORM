@@ -27,24 +27,24 @@ export class DischargeFormComponent {
       {label: 'Drugs :Yes',value: 'Drugs',   checked: false},
       {label: 'No',value: 'Drugs',   checked: false},
       ]},
-    {type: 'text', name: 'details', placeHolder: 'details', label: 'details'},  
+    {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},  
     {type: 'checkbox', name: 'claimpay', label: " ", options: [
       {label: 'Food :Yes',value: 'Food',   checked: false},
       {label: 'No',value: 'Food',   checked: false},
         ]},  
-    {type: 'text', name: 'details', placeHolder: 'details', label: 'details'},
+    {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
     {type: 'checkbox', name: 'claimpay', label: " ", options: [
       {label: 'Latex:Yes',value: 'Latex',   checked: false},
       {label: 'No',value: 'Latex',   checked: false},
         ]},  
-    {type: 'text', name: 'details', placeHolder: 'details', label: 'details'},
+    {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
     {type: 'checkbox', name: 'claimpay', label: " ", options: [
       {label: 'Other:Yes',value: 'Food',   checked: false},
       {label: 'No',value: 'Food',   checked: false},
         ]},  
-    {type: 'text', name: 'details', placeHolder: 'details', label: 'details'},
+    {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
     {type: 'sectionTitle', title: 'PHYSICAL DETAILS:', color: '#000000'},
 
     {type: 'text', name: 'Weight', placeHolder: 'What is your weight:kilograms', label: 'What is your weight:kilograms'},
@@ -55,49 +55,38 @@ export class DischargeFormComponent {
       {label: 'Yes',value: 'Food',   checked: false},
       {label: 'No',value: 'Food',   checked: false},
         ]},
-    {type: 'text', name: 'details', placeHolder: 'details', label: 'details'},
-    {type: 'text', name: 'Nameofreferringdoctor', placeHolder: 'Name of referring doctor', label: 'Name of referring doctor'},
-    {type: 'text', name: 'Doctorscontact', placeHolder: 'Doctor’s contact', label: 'Doctor’s contact'},
-    {type: 'sectionTitle', title: 'Admission Date:', color: '#000000'},
-    
-   
+    {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
-    {type: 'text', name: 'Emailaddress', placeHolder: 'Email address', label: 'Email address'},
-    {type: 'text', name: 'Telephone', placeHolder: 'Telephone:  Home', label: 'Telephone:  Home'},
-    {type: 'text', name: 'Business', placeHolder: 'Business/ Work', label: 'Business/ Work'},
-    {type: 'text', name: 'Occupation', placeHolder: 'Occupation', label: 'Occupation'},
-    
-    {type: 'text', name: 'MaritalStatus', placeHolder: 'Marital Status', label: 'Marital Status'},
-    {type: 'text', name: 'Nationality', placeHolder: 'Nationality', label: 'Nationality'},
-    {type: 'text', name: 'Languages', placeHolder: 'Languages client speaks/ understands', label: 'Languages client speaks/ understands'},
-    {type: 'text', name: 'Religion', placeHolder: 'Religion', label: 'Religion'},
-    
-    
-    
-    {type: 'textarea', name: 'Other', placeHolder: 'kindly explain', label:'kindly explain'},
-    {type: 'sectionTitle', title: 'Videography and photography aided treatment:', color: '#000000'},
-    {type: 'sectionTitle', title: 'Creswave hospital, with your consent wishes to use videos and photos to track the progress of our clients.These videos will solely be used for this purpose and will only be shared among family and clinical staff involved in the direct care of the client. They will also be shared at the discretion of the client/ guardian.This will only happen if the family / relatives agree and sign the consent below.'
-    , color: '#000000'},
-    {type: 'sectionTitle', title: 'This will only happen if the family / relatives agree and sign the consent below', color: '#000000'},
-    
-    {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
-    {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
-    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+    {type: 'sectionTitle', title: 'CARDIAC', color: '#000000'},
+    {type: 'checkbox', name: 'heartattack', label: "Have you ever had a heart attack? ", options: [
+      {label: 'Yes',value: 'heartattack',   checked: false},
+      {label: 'No',value: 'heartattack',   checked: false},
+        ]},
+    {type: 'text', name: 'year', placeHolder: 'year', label: 'year'}, 
 
-    {type: 'sectionTitle', title: 'SECTION C: ACKNOWLEDGMENT', color: '#000000'},
-    {type: 'sectionTitle', title: 'All patients to complete.', color: '#000000'},
-    {type: 'sectionTitle', title: 'By signing this form I acknowledge that:', color: '#000000'},
-    {type: 'checkbox', name: 'Bysigning', label: "By signing this form I acknowledge that:", options: [
-      {value: 'PrivateHealth', label: 'I certify that the information contained on this form is true and correct to the best of my knowledge. ',  checked: true},
-      {value: ' lossordamage ', label: 'I understand that Creswave hospital will not accept any responsibility for loss or damage to patients’ valuables.',  checked: false},
-      {value: 'Cash', label: 'I have read and understood the information, and accept the conditions, set out in this form, and have no further questions', checked: false},
-      {value: 'Cash', label: 'I understand the costs are estimates only and subject to change as a result of variations in the actual treatment received.',  checked: false},
-      {value: 'Cash', label: 'I acknowledge that it is my ultimate responsibility to confirm with my health insurer the level of cover held',  checked: false},
-      {value: 'Cash', label: 'I accept responsibility for full payment of all amounts for hospital fees and charges not funded by my insurer, and will finalize payment at time of discharge.',  checked: false},  
+    {type: 'checkbox', name: 'heartsurgery', label: "Have you ever had heart surgery? ", options: [
+      {label: 'Yes',value: 'heartsurgery',   checked: false},
+      {label: 'No',value: 'heartsurgery',   checked: false},
+        ]},
+    {type: 'text', name: 'year', placeHolder: 'year', label: 'year'},  
+
+    {type: 'checkbox', name: 'pacemaker', label: "Do you have a pacemaker/internal defibrillator? ", options: [
+      {label: 'Yes',value: 'pacemaker',   checked: false},
+      {label: 'No',value: 'pacemaker',   checked: false},
+        ]},
+    {type: 'text', name: 'year', placeHolder: 'year', label: 'year'},    
+    {type: 'groupedInputs', name: 'Residential Address:', label:'If you have a pacemaker', inputs: [
+      {type: 'text', name: 'Make', placeHolder: 'Make', label: 'Make'},
+      {type: 'text', name: 'Model', placeHolder: 'Model', label: 'Model'},
+      {type: 'text', name: 'Lastchecked', placeHolder: 'Last checked', label: 'Last checked'},
     ]},
+
+    
+    
+    
+    
+
+    
     
     {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
     {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
@@ -121,13 +110,13 @@ export class DischargeFormComponent {
     dob: ['', Validators.required],
     height: ['', Validators.required],
     previousoperations: ['', Validators.required],
-    County: ['', Validators.required],
-    Town: ['', Validators.required],
-    diagnosis: ['', Validators.required],
-    Arealocality: ['', Validators.required],
-    PostalAddress: ['', Validators.required],
-    Code: ['', Validators.required],
-    Emailaddress: ['', Validators.required],
+    heartattack: ['', Validators.required],
+    year: ['', Validators.required],
+    heartsurgery: ['', Validators.required],
+    pacemaker: ['', Validators.required],
+    Make: ['', Validators.required],
+    Model: ['', Validators.required],
+    Lastchecked: ['', Validators.required],
     Telephone: ['', Validators.required],
     Business: ['', Validators.required],
     mobility: ['', Validators.required],
