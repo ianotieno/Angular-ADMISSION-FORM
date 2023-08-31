@@ -169,7 +169,7 @@ export class DischargeFormComponent {
        {label: 'Normal',value: 'Mobility',   checked: false},
        {label: 'Impaired ',value: 'Mobility',   checked: false},
         ]},
-     {type: 'checkbox', name: 'Mobility', label: "Do you use an assistive device ?", options: [
+     {type: 'checkbox', name: 'Mobility', label: "Do you use an assistive device :", options: [
        {label: 'Yes',value: 'Mobility',   checked: false},
        {label: 'No',value: 'Mobility',   checked: false},
         ]},
@@ -182,9 +182,18 @@ export class DischargeFormComponent {
       {label: 'Hemiparesis',value: 'Mobility',   checked: false},
       {label: 'Tremors',value: 'Mobility',   checked: false},
        ]},
-
-
-  ]
+    {type: 'checkbox', name: 'Mobility', label: "ADLS:", options: [
+       {label: 'Self',value: 'Mobility',   checked: false},
+       {label: 'Assist',value: 'Mobility',   checked: false},
+       {label: 'Tota',value: 'Mobility',   checked: false},
+        ]},
+     {type: 'text', name: 'Eating', placeHolder: 'Eating:', label: 'Eating'},
+     {type: 'text', name: 'Bathing', placeHolder: 'Bathing:', label: 'Bathing:'},
+     {type: 'text', name: 'Dressing', placeHolder: 'Dressing:', label: 'Dressing:'},
+  
+  
+  
+    ]
 
   profileForm = this.formBuilder.group({
     patientName: ['', Validators.required],
@@ -219,9 +228,9 @@ export class DischargeFormComponent {
     gastrointestinal: ['', Validators.required],
     specialdietary: ['', Validators.required],
     Mobility: ['', Validators.required],
-    Workphone: ['', Validators.required],
-    claimpay: ['', Validators.required],
-    guardian: ['', Validators.required],
+    Eating: ['', Validators.required],
+    Bathing: ['', Validators.required],
+    Dressing: ['', Validators.required],
     Nameofpatient: ['', Validators.required],
     Bysigning: ['', Validators.required],
     
