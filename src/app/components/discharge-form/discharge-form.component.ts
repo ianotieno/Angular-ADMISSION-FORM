@@ -190,7 +190,24 @@ export class DischargeFormComponent {
      {type: 'text', name: 'Eating', placeHolder: 'Eating:', label: 'Eating'},
      {type: 'text', name: 'Bathing', placeHolder: 'Bathing:', label: 'Bathing:'},
      {type: 'text', name: 'Dressing', placeHolder: 'Dressing:', label: 'Dressing:'},
-  
+
+     {type: 'sectionTitle', title: 'PROSTHESIS / AIDS:', color: '#000000'},
+     {type: 'checkbox', name: 'glasses', label: "Do you wear glasses / contact lenses:", options: [
+       {label: 'Yes',value: 'glasses',   checked: false},
+       {label: 'No',value: 'glasses',   checked: false},
+        ]}, 
+     {type: 'checkbox', name: 'HearingAid', label: "Hearing Aid or other hearing appliance:", options: [
+       {label: 'Yes',value: 'HearingAid',   checked: false},
+       {label: 'No',value: 'HearingAid',   checked: false},
+        ]}, 
+    {type: 'checkbox', name: 'Dentures', label: "Dentures/Caps/Crowns/Loose teeth:", options: [
+       {label: 'Yes',value: 'Dentures',   checked: false},
+       {label: 'No',value: 'Dentures',   checked: false},
+        ]},   
+    {type: 'checkbox', name: 'splints', label: "Do you wear any type of splints:", options: [
+       {label: 'Yes',value: 'splints',   checked: false},
+       {label: 'No',value: 'splints',   checked: false},
+        ]},   
   
   
     ]
@@ -231,8 +248,11 @@ export class DischargeFormComponent {
     Eating: ['', Validators.required],
     Bathing: ['', Validators.required],
     Dressing: ['', Validators.required],
-    Nameofpatient: ['', Validators.required],
-    Bysigning: ['', Validators.required],
+    glasses: ['', Validators.required],
+    Dentures: ['', Validators.required],
+    splints: ['', Validators.required],
+    HearingAid: ['', Validators.required],
+    
     
   });
 
