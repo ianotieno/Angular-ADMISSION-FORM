@@ -119,19 +119,19 @@ export class AdmissionAssesmentFormComponent {
     {
       type: 'radios', name: 'bloodpressure', label: "Have you ever had high blood pressure?", options: [
         { label: 'Yes', value: 'bloodpressure', checked: false },
-        { label: 'No', value: 'blood pressure', checked: true },
+        { label: 'No', value: 'bloodpressure', checked: true },
       ]
     },
 
     { type: 'sectionTitle', title: 'RESPIRATORY:', color: '#000000' },
     {
-      type: 'radios', name: ' smoke', label: "Do you smoke?", options: [
-        { label: 'Yes', value: ' smoke', checked: false },
-        { label: 'No', value: ' smoke', checked: true },
+      type: 'radios', name: ' smoking', label: "Do you smoke?", options: [
+        { label: 'Yes', value: ' smoking', checked: false },
+        { label: 'No', value: ' smoking', checked: true },
       ]
     },
-    { type: 'text', name: ' smoking', placeHolder: 'Any history of smoking:', label: 'Any history of smoking	' },
 
+    { type: 'text', name: 'Mobility', placeHolder: 'Any history of smoking:', label: 'Any history of smoking:	' },
     {
       type: 'radios', name: 'Asthma', label: "Do you have Asthma?", options: [
         { label: 'Yes', value: 'Asthma', checked: false },
@@ -562,6 +562,9 @@ export class AdmissionAssesmentFormComponent {
     Signature: ['', Validators.required],
     claimpay: ['', Validators.required],
     tendencytobleed: ['', Validators.required],
+    smoking: ['', Validators.required],
+    history: ['', Validators.required],
+    bloodpressure: ['', Validators.required],
   });
   onSave() {
 
