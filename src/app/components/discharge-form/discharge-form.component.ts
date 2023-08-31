@@ -352,6 +352,30 @@ export class DischargeFormComponent {
       {label: 'Resists care',value: 'Behavior',   checked: false},
        ]}, 
        {type: 'textarea', name: 'Behavior', placeHolder: 'Other Behaviors', label: 'Other Behaviors:'},
+
+       {type: 'checkbox', name: 'Delusions', label: "Delusions and/ or hallucinations:", options: [
+        {label: 'Yes',value: 'Delusions',   checked: false},
+        {label: 'No',value: 'Delusions',   checked: false},
+         ]},
+      {type: 'sectionTitle', title: 'Medications and treatments', color: '#000000'},
+      {type: 'checkbox', name: 'MedicationAndIntendedDoses', label: "Does patient have all the medication and intended doses of the same:", options: [
+        {label: 'Yes',value: 'MedicationAndIntendedDoses',   checked: false},
+        {label: 'No',value: 'MedicationAndIntendedDoses',   checked: false},
+         ]},
+      {type: 'textarea', name: 'descripancies', placeHolder: 'Were there any noted descripancies', label: 'Were there any noted descripancies:'},  
+    
+      {type: 'checkbox', name: 'DiagnosisOrMedication', label: "Are vital signs required related to a diagnosis or medication", options: [
+        {label: 'Yes',value: 'DiagnosisOrMedication',   checked: false},
+        {label: 'No',value: 'DiagnosisOrMedication',   checked: false},
+         ]},
+         {type: 'textarea', name: 'MedsAndDosage', placeHolder: 'State the meds and dosage the patient is on', label: 'Were there any noted descripancies:'},  
+       
+     {type: 'sectionTitle', title: 'CLINICAL NOTES', color: '#000000'},
+     {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Past Medical History', label: 'Past Medical History:'},
+     {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Present Medical history', label: 'Present Medical history:'},
+     {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Socio- economic History', label: 'Socio- economic History:'},
+     {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Investigations on Discharge', label: 'Investigations on Discharge:'},
+     {type: 'textarea', name: 'ClinicalNotes', placeHolder: 'Medications', label: 'Medications:'},
     ]
 
   profileForm = this.formBuilder.group({
@@ -414,6 +438,12 @@ export class DischargeFormComponent {
     Aggressivebehavior:['', Validators.required],
     disruptivebehavior:['', Validators.required],
     Behavior:['', Validators.required],
+    Delusions:['', Validators.required],
+    MedicationAndIntendedDoses:['', Validators.required],
+    descripancies:['', Validators.required],
+    DiagnosisOrMedication:['', Validators.required],
+    MedsAndDosage:['', Validators.required],
+    ClinicalNotes:['', Validators.required],
   });
 
   saveForm() {
