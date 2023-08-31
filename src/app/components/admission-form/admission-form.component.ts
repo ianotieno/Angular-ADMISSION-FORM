@@ -21,10 +21,8 @@ export class AdmissionFormComponent {
     {type: 'text', name: 'Doctorscontact', placeHolder: 'Doctor’s contact', label: 'Doctor’s contact'},
     {type: 'sectionTitle', title: 'Admission Date:', color: '#000000'},
     
-    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+    {type: 'date', name: 'dob', label: 'Enter a date ', hint: 'MM/DD/YYYY'},
+    
     {type: 'sectionTitle', title: 'PERSONAL DETAILS:', color: '#000000'},
     {type: 'text', name: 'Title', placeHolder: 'Title', label: 'Title'},
     {type: 'text', name: 'Surname', placeHolder: 'Surname', label: 'Surname'},
@@ -59,14 +57,14 @@ export class AdmissionFormComponent {
     ]},
     {type: 'groupedInputs', name: 'EMERGENCY CONTACT PERSON', label:'SECOND CONTACT PERSON:', inputs: [
       {type: 'text', name: 'Name', placeHolder: 'Name', label: 'Name'},
-      {type: 'textarea', name: 'Relationshiptopatient', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
+      {type: 'textarea', name: 'Relationship', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
       {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
       {type: 'text', name: 'Cellphone', placeHolder: 'Cell phone', label: 'Cell phone'},
       {type: 'text', name: 'Workphone', placeHolder: 'Work phone', label: 'Work phone'},
     ]},
     {type: 'groupedInputs', name: 'EMERGENCY CONTACT PERSON', label:'THIRD CONTACT PERSON:', inputs: [
       {type: 'text', name: 'Name', placeHolder: 'Name', label: 'Name'},
-      {type: 'textarea', name: 'Relationshiptopatient', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
+      {type: 'textarea', name: 'Relationship', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
       {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
       {type: 'text', name: 'Cellphone', placeHolder: 'Cell phone', label: 'Cell phone'},
       {type: 'text', name: 'Workphone', placeHolder: 'Work phone', label: 'Work phone'},
@@ -86,10 +84,7 @@ export class AdmissionFormComponent {
     
     {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
     {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
-    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+    {type: 'date', name: 'dob', label: 'Enter a date ', hint: 'MM/DD/YYYY'},
 
     {type: 'sectionTitle', title: 'SECTION C: ACKNOWLEDGMENT', color: '#000000'},
     {type: 'sectionTitle', title: 'All patients to complete.', color: '#000000'},
@@ -105,10 +100,7 @@ export class AdmissionFormComponent {
     
     {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
     {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
-    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+    {type: 'date', name: 'dob', label: 'Enter a date ', hint: 'MM/DD/YYYY'},
 
   ];
 
@@ -151,6 +143,7 @@ export class AdmissionFormComponent {
     guardian: ['', Validators.required],
     Nameofpatient: ['', Validators.required],
     Bysigning: ['', Validators.required],
+    Other: ['', Validators.required],
   });
 
   onSave() {
