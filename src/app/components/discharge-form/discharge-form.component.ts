@@ -328,7 +328,30 @@ export class DischargeFormComponent {
         {label: 'Cold',value: 'Skin',   checked: false},
         {label: 'Dry',value: 'Skin',   checked: false},
          ]},    
-
+     {type: 'checkbox', name: 'Edema', label: "Edema:", options: [
+        {label: 'Pitting',value: 'Edema',   checked: false},
+        {label: 'Non-pitting',value: 'Edema',   checked: false},
+        {label: 'Pulmonary',value: 'Edema',   checked: false},
+        {label: 'Cerebral',value: 'Edema',   checked: false},
+        {label: 'Macular',value: 'Edema',   checked: false},
+         ]},
+      {type: 'sectionTitle', title: 'Psychosocial', color: '#000000'},  
+      {type: 'checkbox', name: 'Selfinjurious', label: "Self injurious behavior:", options: [
+        {label: 'Yes',value: 'Selfinjurious',   checked: false},
+        {label: 'No',value: 'Selfinjurious',   checked: false},
+         ]},
+     {type: 'checkbox', name: 'Aggressivebehavior', label: "Aggressive behavior:", options: [
+        {label: 'Yes',value: 'Aggressivebehavior',   checked: false},
+        {label: 'No',value: 'Aggressivebehavior',   checked: false},
+         ]}, 
+     {type: 'textarea', name: 'disruptivebehavior', placeHolder: 'Frequency of disruptive behavior', label: 'Frequency of disruptive behavior:'},  
+     {type: 'checkbox', name: 'Behavior', label: "Behavior:", options: [
+      {label: 'Calm ',value: 'Behavior',   checked: false},
+      {label: 'Lethargic ',value: 'Behavior',   checked: false},
+      {label: 'Angry',value: 'Behavior',   checked: false},
+      {label: 'Resists care',value: 'Behavior',   checked: false},
+       ]}, 
+       {type: 'textarea', name: 'Behavior', placeHolder: 'Other Behaviors', label: 'Other Behaviors:'},
     ]
 
   profileForm = this.formBuilder.group({
@@ -386,6 +409,11 @@ export class DischargeFormComponent {
     whereapplicable:['', Validators.required],
     Pulse:['', Validators.required],
     Skin:['', Validators.required],
+    Edema:['', Validators.required],
+    Selfinjurious:['', Validators.required],
+    Aggressivebehavior:['', Validators.required],
+    disruptivebehavior:['', Validators.required],
+    Behavior:['', Validators.required],
   });
 
   saveForm() {
