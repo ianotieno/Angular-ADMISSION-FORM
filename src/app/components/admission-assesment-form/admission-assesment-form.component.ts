@@ -22,10 +22,17 @@ export class AdmissionAssesmentFormComponent {
     {type: 'text', name: 'Doctorscontact', placeHolder: 'Doctor’s contact', label: 'Doctor’s contact'},
     {type: 'sectionTitle', title: 'Admission Date:', color: '#000000'},
     
-    {type: 'date', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY'},
+    {type: 'date', name: 'dob', label: 'Enter date of admission', hint: 'MM/DD/YYYY'},
 
     {type: 'sectionTitle', title: 'PERSONAL DETAILS:', color: '#000000'},
-    {type: 'text', name: 'Title', placeHolder: 'Title', label: 'Title'},
+    {type: 'text', name: '', placeHolder: 'Title', label: 'Title'},
+    {type: 'checkbox', name: 'Title', label: "Title", options: [
+      {value: 'Title',  label: 'Mr',  checked: false},
+      {value: 'Title',  label: 'Mrs',  checked: false},
+      {value: 'Title', label: 'Ms',  checked: false},
+      {value: 'Title',  label: 'Miss',  checked: false},
+      {value: 'Title',  label: 'Dr',  checked: false},
+    ]},
     {type: 'text', name: 'Surname', placeHolder: 'Surname', label: 'Surname'},
     {type: 'text', name: 'Firstname', placeHolder: 'First name', label: 'First name'},
     {type: 'text', name: 'Othernames', placeHolder: 'Other names', label: 'Other names'},
@@ -146,6 +153,7 @@ export class AdmissionAssesmentFormComponent {
     Nameofpatient: ['', Validators.required],
     Bysigning: ['', Validators.required],
     Relationshiptopatient: ['', Validators.required],
+    Other: ['', Validators.required],
   });
 
   onSave() {
