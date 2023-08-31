@@ -11,6 +11,7 @@ export class CheckboxComponent implements OnInit {
   @Input() form!: FormGroup;
   @Input() name!: string;
   @Input() label!: string;
+  @Input() alignment!:'vertical' | 'horizontal';
   @Input() options!: RadioOption[];
 
   checkboxGroup!: any;

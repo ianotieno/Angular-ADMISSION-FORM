@@ -99,11 +99,11 @@ export class DischargeFormComponent {
             ]},
         
     {type: 'sectionTitle', title: 'RESPIRATORY:', color: '#000000'},
-    {type: 'checkbox', name: ' smoke', label: "Do you smoke?", options: [
-      {label: 'Yes',value: ' smoke',   checked: false},
-      {label: 'No',value: ' smoke',   checked: false},
+    {type: 'checkbox', name: 'smoking', label: "Do you smoke?", options: [
+      {label: 'Yes',value: 'smoking',   checked: false},
+      {label: 'No',value: 'smoking',   checked: false},
             ]},
-    {type: 'text', name: ' smoking', placeHolder: 'Any history of smoking:', label: 'Any history of smoking	'}, 
+    {type: 'text', name: 'smoking', placeHolder: 'Any history of smoking:', label: 'Any history of smoking	'}, 
 
     {type: 'checkbox', name: 'Asthma', label: "Do you have Asthma?", options: [
       {label: 'Yes',value: 'Asthma',   checked: false},
@@ -220,10 +220,8 @@ export class DischargeFormComponent {
        {label: 'No',value: 'HepatitisA',   checked: false},
         ]},
 
-      {type: 'dateRange', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+        {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
+
     {type: 'checkbox', name: 'infectiousdisease', label: "Do you have or have you been exposed to an infectious disease in the past 14 days? (e.g. Chickenpox, Measles:", options: [
       {label: 'Yes',value: 'infectiousdisease',   checked: false},
       {label: 'No',value: 'infectiousdisease',   checked: false},
@@ -405,7 +403,7 @@ export class DischargeFormComponent {
     Lastchecked: ['', Validators.required],
     heartproblems: ['', Validators.required],
     irregularheartbeat: ['', Validators.required],
-    smoke: ['', Validators.required],
+    smoking: ['', Validators.required],
     Asthma: ['', Validators.required],
     Bronchitis: ['', Validators.required],
     Sleepapnea: ['', Validators.required],
@@ -451,6 +449,7 @@ export class DischargeFormComponent {
     ClinicalNotes:['', Validators.required],
     Name:['', Validators.required],
     Signature:['', Validators.required],
+    claimpay:['', Validators.required],
   });
 
   saveForm() {
