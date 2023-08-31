@@ -25,8 +25,8 @@ export class AdmissionAssesmentFormComponent {
     {type: 'date', name: 'dob', label: 'Enter date of admission', hint: 'MM/DD/YYYY'},
 
     {type: 'sectionTitle', title: 'PERSONAL DETAILS:', color: '#000000'},
-    {type: 'text', name: '', placeHolder: 'Title', label: 'Title'},
-    {type: 'checkbox', name: 'Title', label: "Title", options: [
+    
+    {type: 'checkbox', name: 'Title:', label: "Title", options: [
       {value: 'Title',  label: 'Mr',  checked: false},
       {value: 'Title',  label: 'Mrs',  checked: false},
       {value: 'Title', label: 'Ms',  checked: false},
