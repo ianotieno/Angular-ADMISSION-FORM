@@ -91,6 +91,7 @@ export class AdmissionFormComponent {
       start: {name: 'dob', placeHolder: 'D.O.A'},
       end: {name: 'dob', placeHolder: 'D.O.D'}
     }},
+
     {type: 'sectionTitle', title: 'SECTION C: ACKNOWLEDGMENT', color: '#000000'},
     {type: 'sectionTitle', title: 'All patients to complete.', color: '#000000'},
     {type: 'sectionTitle', title: 'By signing this form I acknowledge that:', color: '#000000'},
@@ -100,12 +101,16 @@ export class AdmissionFormComponent {
       {value: 'Cash', label: 'I have read and understood the information, and accept the conditions, set out in this form, and have no further questions', checked: false},
       {value: 'Cash', label: 'I understand the costs are estimates only and subject to change as a result of variations in the actual treatment received.',  checked: false},
       {value: 'Cash', label: 'I acknowledge that it is my ultimate responsibility to confirm with my health insurer the level of cover held',  checked: false},
-      {value: 'Cash', label: 'I accept responsibility for full payment of all amounts for hospital fees and charges not funded by my insurer, and will finalize payment at time of discharge.',  checked: false},
-      {value: 'Cash', label: 'Cash',  checked: false},
-      {value: 'Cash', label: 'Cash',  checked: false},
-      
-      
+      {value: 'Cash', label: 'I accept responsibility for full payment of all amounts for hospital fees and charges not funded by my insurer, and will finalize payment at time of discharge.',  checked: false},  
     ]},
+    
+    {type: 'text', name: 'Nameofpatient', placeHolder: 'Name of patient/ parent / guardian', label:'Name of patient/ parent / guardian'},
+    {type: 'textarea', name: 'guardian', placeHolder: 'Signature of patient/ parent / guardian:', label:'Signature of patient/ parent / guardian:'},
+    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
+      start: {name: 'dob', placeHolder: 'D.O.A'},
+      end: {name: 'dob', placeHolder: 'D.O.D'}
+    }},
+
   ];
 
   admissionForm = this.formBuilder.group({
