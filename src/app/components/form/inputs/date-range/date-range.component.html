@@ -1,0 +1,20 @@
+<ng-container [formGroup]="form">
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>{{ label }}</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input
+        [formControlName]="inputs.start.name"
+        matStartDate
+        [placeholder]="inputs.start.placeHolder"
+      />
+      <input
+        [formControlName]="inputs.end.name"
+        matEndDate
+        [placeholder]="inputs.end.placeHolder"
+      />
+    </mat-date-range-input>
+    <mat-hint>{{ hint }}</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+</ng-container>

@@ -1,0 +1,12 @@
+<ng-container [formGroup]="checkboxGroup">
+  <mat-label class="margin-left">
+    {{label}}
+    <mat-label
+      *ngFor="let control of checkboxGroup.controls['options'].controls; let index=index;"
+    >
+      {{ options[index].label }}
+      <mat-checkbox [formControl]="control" [value]="options[index].value" [checked]="options[index].checked">
+      </mat-checkbox>
+    </mat-label>
+  </mat-label>
+</ng-container>

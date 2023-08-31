@@ -1,0 +1,27 @@
+<form [formGroup]="form" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <ng-container *ngFor="let content of formContents">
+        <app-form-title
+          *ngIf="content.type === 'sectionTitle'"
+          [title]="content.title"
+          [color]="content.color"
+        >
+        </app-form-title>
+        <app-inputs
+          *ngIf="content.type !== 'sectionTitle'"
+          [form]="form"
+          [formContent]="content"
+        ></app-inputs>
+      </ng-container>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button (click)="onSave()" mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

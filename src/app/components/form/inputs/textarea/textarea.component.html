@@ -1,0 +1,10 @@
+<ng-container [formGroup]="form">
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>{{ label }}</mat-label>
+    <textarea
+      [formControlName]="name"
+      matInput
+      [placeholder]="placeHolder"
+    ></textarea>
+  </mat-form-field>
+</ng-container>

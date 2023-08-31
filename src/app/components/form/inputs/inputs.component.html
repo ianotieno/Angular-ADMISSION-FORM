@@ -1,0 +1,45 @@
+<div class="full-width">
+    <app-text
+      *ngIf="formContent['type'] === 'text'"
+      [form]="form"
+      [placeHolder]="formContent['placeHolder']"
+      [name]="formContent['name']"
+      [label]="formContent['label']"
+    ></app-text>
+    <app-textarea
+      *ngIf="formContent['type'] === 'textarea'"
+      [form]="form"
+      [placeHolder]="formContent['placeHolder']"
+      [name]="formContent['name']"
+      [label]="formContent['label']"
+    ></app-textarea>
+    <app-date-range
+      *ngIf="formContent['type'] === 'dateRange'"
+      [form]="form"
+      [name]="formContent['name']"
+      [label]="formContent['label']"
+      [hint]="formContent['hint']"
+      [inputs]="formContent['inputs']"
+    ></app-date-range>
+    <app-radios
+      *ngIf="formContent['type'] === 'radios'"
+      [form]="form"
+      [name]="formContent['name']"
+      [label]="formContent['label']"
+      [options]="formContent['options']"
+    ></app-radios>
+    <app-grouped-inputs
+      *ngIf="formContent['type'] === 'groupedInputs'"
+      [form]="form"
+      [name]="formContent['name']"
+      [label]="formContent['label']"
+      [inputs]="formContent['inputs']"
+    ></app-grouped-inputs>
+    <app-checkbox
+      *ngIf="formContent['type'] === 'checkbox'"
+      [form]="form"
+      [name]="formContent['name']"
+      [label]="formContent['label']"
+      [options]="formContent['options']"
+    ></app-checkbox>
+</div>
