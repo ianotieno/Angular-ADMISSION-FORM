@@ -45,7 +45,6 @@ export class AdmissionFormComponent {
     {type: 'text', name: 'Telephone', placeHolder: 'Telephone:  Home', label: 'Telephone:  Home'},
     {type: 'text', name: 'Business', placeHolder: 'Business/ Work', label: 'Business/ Work'},
     {type: 'text', name: 'Occupation', placeHolder: 'Occupation', label: 'Occupation'},
-    
     {type: 'text', name: 'MaritalStatus', placeHolder: 'Marital Status', label: 'Marital Status'},
     {type: 'text', name: 'Nationality', placeHolder: 'Nationality', label: 'Nationality'},
     {type: 'text', name: 'Languages', placeHolder: 'Languages client speaks/ understands', label: 'Languages client speaks/ understands'},
@@ -58,14 +57,14 @@ export class AdmissionFormComponent {
       {type: 'text', name: 'Cellphone', placeHolder: 'Cell phone', label: 'Cell phone'},
       {type: 'text', name: 'Workphone', placeHolder: 'Work phone', label: 'Work phone'},
     ]},
-    {type: 'groupedInputs', name: 'SECOND CONTACT PERSON', label:'EMERGENCY CONTACT PERSON:', inputs: [
+    {type: 'groupedInputs', name: 'EMERGENCY CONTACT PERSON', label:'SECOND CONTACT PERSON:', inputs: [
       {type: 'text', name: 'Name', placeHolder: 'Name', label: 'Name'},
       {type: 'textarea', name: 'Relationshiptopatient', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
       {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
       {type: 'text', name: 'Cellphone', placeHolder: 'Cell phone', label: 'Cell phone'},
       {type: 'text', name: 'Workphone', placeHolder: 'Work phone', label: 'Work phone'},
     ]},
-    {type: 'groupedInputs', name: 'THIRD CONTACT PERSON', label:'EMERGENCY CONTACT PERSON:', inputs: [
+    {type: 'groupedInputs', name: 'EMERGENCY CONTACT PERSON', label:'THIRD CONTACT PERSON:', inputs: [
       {type: 'text', name: 'Name', placeHolder: 'Name', label: 'Name'},
       {type: 'textarea', name: 'Relationshiptopatient', placeHolder: 'Relationship to patient:', label: 'Relationship to patient:'},
       {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
@@ -137,7 +136,7 @@ export class AdmissionFormComponent {
     Business: ['', Validators.required],
     mobility: ['', Validators.required],
     motor: ['', Validators.required],
-    occupation: ['', Validators.required],
+    Occupation: ['', Validators.required],
     MaritalStatus: ['', Validators.required],
     Nationality: ['', Validators.required],
     Languages: ['', Validators.required],

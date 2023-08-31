@@ -42,4 +42,12 @@
       [label]="formContent['label']"
       [options]="formContent['options']"
     ></app-checkbox>
+    <app-date
+      *ngIf="formContent['type'] === 'date'"
+      [form]="form"
+      [name]="formContent['name']"
+      [label]="formContent['label']"
+      [hint]="formContent['hint']"
+      
+    ></app-date>
 </div>

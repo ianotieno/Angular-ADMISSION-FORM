@@ -17,30 +17,27 @@ export class DischargeFormComponent {
     {type: 'text', name: 'Address', placeHolder: 'Address', label: 'Address'},
     {type: 'text', name: 'Postcode', placeHolder: 'Postcode', label: 'Postcode'},
 
-    {type: 'dateRange', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
+    {type: 'date', name: 'dob', label: 'Enter a Date of Birth:', hint: 'MM/DD/YYYY' },
 
     {type: 'text', name: 'reaction', placeHolder: 'reaction', label: 'Have you ever had a reaction to:'},
-    {type: 'checkbox', name: 'claimpay', label: " ", options: [
-      {label: 'Drugs :Yes',value: 'Drugs',   checked: false},
-      {label: 'No',value: 'Drugs',   checked: false},
+    {type: 'radios', name: 'claimpay', label: " Drugs", options: [
+      {label: 'Yes',value: 'Drugs',   checked: false},
+      {label: 'No',value: 'Drugs',   checked: true},
       ]},
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},  
-    {type: 'checkbox', name: 'claimpay', label: " ", options: [
-      {label: 'Food :Yes',value: 'Food',   checked: false},
+    {type: 'radios', name: 'claimpay', label: "Food ", options: [
+      {label: 'Yes',value: 'Food',   checked: false},
       {label: 'No',value: 'Food',   checked: false},
         ]},  
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
-    {type: 'checkbox', name: 'claimpay', label: " ", options: [
-      {label: 'Latex:Yes',value: 'Latex',   checked: false},
+    {type: 'radios', name: 'claimpay', label: "Latex:", options: [
+      {label: 'Yes',value: 'Latex',   checked: false},
       {label: 'No',value: 'Latex',   checked: false},
         ]},  
     {type: 'textarea', name: 'details', placeHolder: 'details', label: 'details'},
 
-    {type: 'checkbox', name: 'claimpay', label: " ", options: [
+    {type: 'radios', name: 'claimpay', label: " ", options: [
       {label: 'Other:Yes',value: 'Food',   checked: false},
       {label: 'No',value: 'Food',   checked: false},
         ]},  

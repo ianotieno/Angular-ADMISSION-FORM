@@ -30,6 +30,7 @@ import { FormComponent } from './components/form/form.component';
 import { FormTitleComponent } from './components/form/title/form-title.component';
 import { CheckboxComponent } from './components/form/inputs/checkbox/checkbox.component';
 import { AdmissionAssesmentFormComponent } from './components/admission-assesment-form/admission-assesment-form.component';
+import { DateComponent } from './components/form/inputs/date/date.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { AdmissionAssesmentFormComponent } from './components/admission-assesmen
     FormTitleComponent,
     CheckboxComponent,
     AdmissionAssesmentFormComponent,
+    DateComponent,
   ],
   imports: [
     BrowserModule,
